@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5.1 Diseño factorial intrasujeto | Análisis de datos en psicología II</title>
+  <meta name="description" content="Libro de DAD2" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5.1 Diseño factorial intrasujeto | Análisis de datos en psicología II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Libro de DAD2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5.1 Diseño factorial intrasujeto | Análisis de datos en psicología II" />
+  
+  <meta name="twitter:description" content="Libro de DAD2" />
+  
+
+<meta name="author" content="Manuel Morales Ortiz" />
+
+
+<meta name="date" content="2023-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"/>
+<link rel="next" href="diseño-factorial-mixto-a2fmx.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y Análisis de Datos II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
+<li class="chapter" data-level="1.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html"><i class="fa fa-check"></i><b>1.2</b> Validez de las investigaciones</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-las-variables-y-definiciones"><i class="fa fa-check"></i><b>1.2.1</b> Validez de las variables y definiciones</a></li>
+<li class="chapter" data-level="1.2.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-del-diseño-de-investigación"><i class="fa fa-check"></i><b>1.2.2</b> Validez del diseño de investigación</a></li>
+<li class="chapter" data-level="1.2.3" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-conclusión-estadística"><i class="fa fa-check"></i><b>1.2.3</b> Validez de conclusión estadística</a></li>
+<li class="chapter" data-level="1.2.4" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#contraste-de-hipótesis-estadísticas"><i class="fa fa-check"></i><b>1.2.4</b> Contraste de hipótesis estadísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="potencia-de-un-contraste.html"><a href="potencia-de-un-contraste.html"><i class="fa fa-check"></i><b>1.3</b> Potencia de un contraste</a></li>
+<li class="chapter" data-level="1.4" data-path="tamaño-del-efecto.html"><a href="tamaño-del-efecto.html"><i class="fa fa-check"></i><b>1.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="1.5" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><i class="fa fa-check"></i><b>1.5</b> Contrastes de hipótesis en los programas estadísticos</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-variable"><i class="fa fa-check"></i><b>1.5.1</b> Contrastes para 1 variable</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa"><i class="fa fa-check"></i><b>1.5.2</b> Contrastes para 1 VI cualitativa y una VD cuantitativa</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación"><i class="fa fa-check"></i><b>1.5.3</b> Pruebas para muestras relacionadas (2 medidas por unidad de observación)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><i class="fa fa-check"></i><b>2</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños transversales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="criterios-de-selección-de-la-técnica-estadística.html"><a href="criterios-de-selección-de-la-técnica-estadística.html"><i class="fa fa-check"></i><b>2.1</b> Criterios de selección de la técnica estadística</a></li>
+<li class="chapter" data-level="2.2" data-path="anova-de-1-factor-completamente-aleatorizado.html"><a href="anova-de-1-factor-completamente-aleatorizado.html"><i class="fa fa-check"></i><b>2.2</b> ANOVA de 1 factor completamente aleatorizado</a></li>
+<li class="chapter" data-level="2.3" data-path="comprobación-de-los-supuestos.html"><a href="comprobación-de-los-supuestos.html"><i class="fa fa-check"></i><b>2.3</b> 3.1. Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="2.4" data-path="tamaño-del-efecto-1.html"><a href="tamaño-del-efecto-1.html"><i class="fa fa-check"></i><b>2.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="2.5" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html"><i class="fa fa-check"></i><b>2.5</b> Comparaciones a posteriori</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#criterio-de-bonferroni"><i class="fa fa-check"></i><b>2.5.1</b> Criterio de Bonferroni</a></li>
+<li class="chapter" data-level="2.5.2" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#prueba-de-tukey"><i class="fa fa-check"></i><b>2.5.2</b> Prueba de Tukey</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="comparaciones-de-tendencia.html"><a href="comparaciones-de-tendencia.html"><i class="fa fa-check"></i><b>2.6</b> Comparaciones de tendencia</a></li>
+<li class="chapter" data-level="2.7" data-path="prueba-de-brown-forsythe.html"><a href="prueba-de-brown-forsythe.html"><i class="fa fa-check"></i><b>2.7</b> Prueba de Brown-Forsythe</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="prueba-de-brown-forsythe.html"><a href="prueba-de-brown-forsythe.html#comparaciones-a-posteriori-1"><i class="fa fa-check"></i><b>2.7.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html"><i class="fa fa-check"></i><b>2.8</b> Prueba de Kuskal-Wallis (KW)</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html#comparaciones-a-posteriori-2"><i class="fa fa-check"></i><b>2.8.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="anova-de-un-factor-con-jamovi.html"><a href="anova-de-un-factor-con-jamovi.html"><i class="fa fa-check"></i><b>2.9</b> ANOVA de un factor con JAMOVI</a></li>
+<li class="chapter" data-level="2.10" data-path="anova-de-un-factor-con-spss.html"><a href="anova-de-un-factor-con-spss.html"><i class="fa fa-check"></i><b>2.10</b> ANOVA de un factor con SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><a href="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><i class="fa fa-check"></i><b>3</b> Diseños factoriales (I): Diseño factorial completamente aleatorizado (A2FCA)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modelo-estadístico.html"><a href="modelo-estadístico.html"><i class="fa fa-check"></i><b>3.1</b> Modelo estadístico</a></li>
+<li class="chapter" data-level="3.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html"><i class="fa fa-check"></i><b>3.2</b> Interacción entre factores</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-1-de-diseño-factorial"><i class="fa fa-check"></i><b>3.2.1</b> Ejemplo 1 de diseño factorial</a></li>
+<li class="chapter" data-level="3.2.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-2-de-diseño-factorial"><i class="fa fa-check"></i><b>3.2.2</b> Ejemplo 2 de diseño factorial</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="a2fc-con-el-programa-jamovi.html"><a href="a2fc-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>3.3</b> A2FC con el programa JAMOVI</a></li>
+<li class="chapter" data-level="3.4" data-path="a2fc-con-el-programa-spss.html"><a href="a2fc-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.4</b> A2FC con el programa SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-longitudinales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-longitudinales.html"><i class="fa fa-check"></i><b>4</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños longitudinales</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><a href="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><i class="fa fa-check"></i><b>4.1</b> Modelo ANOVA 1 factor de medidas repetidas (A1MR)</a></li>
+<li class="chapter" data-level="4.2" data-path="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>4.2</b> Ejemplo 1 de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="4.3" data-path="comprobación-de-los-supuestos-1.html"><a href="comprobación-de-los-supuestos-1.html"><i class="fa fa-check"></i><b>4.3</b> Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="4.4" data-path="tamaño-del-efecto-2.html"><a href="tamaño-del-efecto-2.html"><i class="fa fa-check"></i><b>4.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="4.5" data-path="potencia-de-la-prueba.html"><a href="potencia-de-la-prueba.html"><i class="fa fa-check"></i><b>4.5</b> Potencia de la prueba</a></li>
+<li class="chapter" data-level="4.6" data-path="comparaciones-múltiples.html"><a href="comparaciones-múltiples.html"><i class="fa fa-check"></i><b>4.6</b> Comparaciones múltiples</a></li>
+<li class="chapter" data-level="4.7" data-path="prueba-de-friedman.html"><a href="prueba-de-friedman.html"><i class="fa fa-check"></i><b>4.7</b> Prueba de Friedman</a></li>
+<li class="chapter" data-level="4.8" data-path="ejemplo-2-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-2-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>4.8</b> Ejemplo 2 de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="4.9" data-path="modelo-a1fmr-con-el-programa-jamovi.html"><a href="modelo-a1fmr-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>4.9</b> Modelo A1FMR con el programa JAMOVI</a></li>
+<li class="chapter" data-level="4.10" data-path="prueba-de-friedman-con-el-programa-jamovi.html"><a href="prueba-de-friedman-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>4.10</b> Prueba de Friedman con el programa JAMOVI</a></li>
+<li class="chapter" data-level="4.11" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html"><i class="fa fa-check"></i><b>4.11</b> Modelo A1FMR con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="4.11.1" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html#prueba-de-friedman-con-el-programa-spss"><i class="fa fa-check"></i><b>4.11.1</b> Prueba de Friedman con el programa SPSS</a></li>
+<li class="chapter" data-level="4.11.2" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html#conclusiones"><i class="fa fa-check"></i><b>4.11.2</b> Conclusiones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><a href="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><i class="fa fa-check"></i><b>5</b> Diseños factoriales (II): Diseño factorial con medidas repetidas (A2FMR y A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html"><i class="fa fa-check"></i><b>5.1</b> Diseño factorial intrasujeto</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html#ejemplo-1-diseño-factorial-de-medidas-repetidas"><i class="fa fa-check"></i><b>5.1.1</b> Ejemplo 1: Diseño factorial de medidas repetidas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html"><i class="fa fa-check"></i><b>5.2</b> Diseño factorial mixto (A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html#ejemplo-2-diseño-factorial-mixto"><i class="fa fa-check"></i><b>5.2.1</b> Ejemplo 2: Diseño factorial mixto</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html"><i class="fa fa-check"></i><b>5.3</b> Análisis de los ejemplos con SPSS</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-1-con-spss"><i class="fa fa-check"></i><b>5.3.1</b> Análisis del ejemplo 1 con SPSS</a></li>
+<li class="chapter" data-level="5.3.2" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-2-con-spss"><i class="fa fa-check"></i><b>5.3.2</b> Análisis del ejemplo 2 con SPSS</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de datos en psicología II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="diseño-factorial-intrasujeto" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Diseño factorial intrasujeto<a href="diseño-factorial-intrasujeto.html#diseño-factorial-intrasujeto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Presentamos primero el caso en el que los dos factores son estudiados mediante la estrategia del <em>sujeto como propio control</em> (medidas repetidas). Su modelo estadístico es:</p>
+<p><span class="math display">\[
+Y_{ijk} =\mu+\alpha_i+\beta_j+ \pi_k + (\alpha\beta)_{jk}+ (\alpha\pi)_{ji}+ (\beta\pi)_{ki}+(\alpha\beta\pi)_{jki}+\epsilon_{ijk}
+\left\{\begin{array}{ccrccr}
+                                             i&amp;=&amp; 1,&amp;2,&amp;\dots,&amp;n   \\
+                                              j &amp;=&amp;1,&amp;2,&amp;\dots,&amp;a   \\
+                                            k &amp;=&amp;1,&amp;2,&amp;\dots,&amp;b \\
+\end{array}\right.
+\]</span></p>
+<p>donde <span class="math inline">\(Y_{ijk}\)</span> es la medida de la VD del sujeto <em>i</em> en la condición <em>jk</em>; <span class="math inline">\(\mu\)</span> es una constante (la media global de todas las puntuaciones); <span class="math inline">\(\alpha_j\)</span> es el efecto del tratamiento <span class="math inline">\(a_j\)</span>; <span class="math inline">\(\beta_k\)</span> es el efecto del tratamiento <span class="math inline">\(b_k\)</span>; <span class="math inline">\(\pi_i\)</span> es el efecto asociado al sujeto <em>i</em>; <span class="math inline">\((\alpha\beta)_{jk}\)</span> es el efecto de la combinación de tratamientos <span class="math inline">\(a_jb_k\)</span>; <span class="math inline">\((\alpha\pi)_{ji}\)</span> es el efecto de la interacción entre el tratamiento <em>j</em> del factor A y el sujeto <em>i</em>; <span class="math inline">\((\beta\pi)_{ji}\)</span> es el efecto de la interacción entre el tratamiento <em>k</em> del factor B y el sujeto <em>i</em>; <span class="math inline">\((\alpha\beta\pi)_{jki}\)</span> es el efecto de la interacción de tercer orden del nivel <em>j</em> del factor A, el <em>k-ésimo</em> nivel del factor B y el <em>i-ésimo</em> sujeto. Por último, <span class="math inline">\(\epsilon_{ijk}\)</span> es el término del error.</p>
+<p>Al igual que en otros modelos de ANOVA factoriales, el investigador está interesado en estudiar los efectos principales y de interacción. Cada uno de estos efectos se realiza mediante la prueba F donde se comparan las medias cuadráticas de cada uno de los efectos con sus correspondientes medias cuadráticas del error.</p>
+<div id="ejemplo-1-diseño-factorial-de-medidas-repetidas" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Ejemplo 1: Diseño factorial de medidas repetidas<a href="diseño-factorial-intrasujeto.html#ejemplo-1-diseño-factorial-de-medidas-repetidas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un ejemplo de este tipo de diseños propuesto por <span class="citation">Maxwell &amp; Delaney (<a href="análisis-de-los-ejemplos-con-spss.html#ref-maxwell">2004</a>)</span> en el que se deseaba estudiar el efecto de la presencia de distractores (ruido o sin ruido) y la orientación del estímulo (0 , 4 y 8 grados) en una prueba de percepción donde se pretende discriminar entre dos estímulos. La VD fue el tiempo de reacción. Los resultados aparecen en la siguiente tabla:</p>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="figurasR/boxplot_ejemplo51.png" alt="Modelo AF2MR: Boxplot del ejemplo 1" width="60%" />
+<p class="caption">
+Figura 5.1: Modelo AF2MR: Boxplot del ejemplo 1
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="figurasR/resultados51_jamovi.png" alt="Modelo AF2MR: Resultados del ejemplo 1" width="50%" />
+<p class="caption">
+Figura 5.2: Modelo AF2MR: Resultados del ejemplo 1
+</p>
+</div>
+<p>Estos resultados son válidos siempre y cuando se cumpla el supuesto de esfericidad estudiado en el tema 4. Una vez comprobado este supuesto con la prueba de Mauchly pueden tomarse decisiones acerca de la significación de los efectos. En este ejemplo se obtienen los siguientes resultados en relación con la prueba de esfericidad. Podemos observar que los valores de <span class="math inline">\(\epsilon\)</span> de Geisser-Greenhouse (GG) son más pequeños que los de Huynh-Feldt (HF). Utilizar los valores de GG para realizar los contrastes de hipótesis supone aplicar una estrategia conservadora en el análisis de los datos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="figurasR/esfericidad51_jamovi.png" alt="Modelo A2FMR: Prueba de esfericidad" width="70%" />
+<p class="caption">
+Figura 5.3: Modelo A2FMR: Prueba de esfericidad
+</p>
+</div>
+<div id="tamaño-del-efecto-3" class="section level4 hasAnchor" number="5.1.1.1">
+<h4><span class="header-section-number">5.1.1.1</span> Tamaño del efecto<a href="diseño-factorial-intrasujeto.html#tamaño-del-efecto-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Aunque puede utilizarse el estadístico <span class="math inline">\(\eta^2\)</span> para determinar el tamaño del efecto, los autores prefieren estimar este estadístico mediante <span class="math inline">\(\omega^2\)</span>. En este tipo de diseños la fórmula para calcularlo es:</p>
+<ul>
+<li>Para el efecto A (ruido):</li>
+</ul>
+<p><span class="math display">\[
+\omega_{A}^2 = \frac{(a-1)(F_A - 1)}{(a-1)(F_A - 1)+ nab} = \frac{1*(33.766 - 1)}{1*(33.766 - 1) + 10*2*3} = 0.353
+\]</span></p>
+<ul>
+<li>Para el efecto B:</li>
+</ul>
+<p><span class="math display">\[
+\omega_{B}^2 = \frac{(b-1)(F_B - 1)}{(b-1)(F_B - 1)+ nab} = \frac{(3-1)*(40.719 - 1)}{(3-1)*(40.719 - 1) + 10*2*3} = 0.569
+\]</span></p>
+<ul>
+<li>Para el efecto AB:</li>
+</ul>
+<p><span class="math display">\[
+\omega_{AB}^2 = \frac{(a-1)(b-1)(F_{AB} - 1)}{(a-1)(b-1)(F_{AB} - 1)+ nab} = \frac{(3-1)*(45.310 - 1)}{(3-1)*(45.310 - 1) + 10*2*3} = 0.596
+\]</span></p>
+<p>Si hubiéramos utilizado el estadístico <span class="math inline">\(\eta^2\)</span> proporcionado por el programa SPSS obtendríamos los siguientes valores: 0.79 para el factor A, 0.819 para el factor B y 0.834 para el factor AB. Tal y como señalan <span class="citation">Pardo &amp; SanMartin (<a href="análisis-de-los-ejemplos-con-spss.html#ref-pardo">2010</a>)</span> estos valores están bastante inflados y no son un buen estimador del tamaño del efecto.</p>
+</div>
+<div id="estudio-de-la-interacción" class="section level4 hasAnchor" number="5.1.1.2">
+<h4><span class="header-section-number">5.1.1.2</span> Estudio de la interacción<a href="diseño-factorial-intrasujeto.html#estudio-de-la-interacción" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Al igual que se mencionó en el tema 4, para estudiar los efectos interactivos lo que tenemos que hacer es comparar los efectos simples. En este diseño tenemos 3 efectos simples por lo que habrá que realizar tres comparaciones:</p>
+<ul>
+<li>Para introducir los coeficientes de los contrastes es necesario seguir el orden de las condiciones que aparecen en el fichero de datos. La forma más sencilla de realizar este contraste es creando una nueva variable con la suma de las puntuaciones de las medias que se comparan. En este caso, estamos realizando lo siguiente:</li>
+</ul>
+<p><span class="math display">\[
+\phi_1 = \mu_{ausente.a0} - \mu_{presente.a0} -  (\mu_{ausente.a4} - (\mu_{presente.a4}) =  \mu_{a_1b_1} - \mu_{a_2b_1} - (\mu_{a_1b_2} -  \mu_{a_2b_2})
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="figurasR/contraste1_jamovi.png" alt="Modelo A2FMR en SPSS: Comparación efectos simples" width="70%" />
+<p class="caption">
+Figura 5.4: Modelo A2FMR en SPSS: Comparación efectos simples
+</p>
+</div>
+<p>Esta nueva variable creada (<em>Contraste 1</em>) supone una combinación lineal (suma de varias puntuaciones correspondientes a 4 variables). Bajo el modelo de hipótesis nula la suma de esta variable debe ser igual a 0. Para contrastar esta hipótesis podemos utiliazar la prueba T para una muestra (o la prueba de Wilcoxon en el caso de que no se cumpla el supuesto de normalidad). Los resultados de este análisis nos indican que rechazamos la hipótesis nula. Es decir existe un efecto interactivo significativo cuando se comparan los efectos simples de A en <span class="math inline">\(b_1\)</span> y <span class="math inline">\(b_2\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="figurasR/contraste1res_jamovi.png" alt="Modelo A2FMR en SPSS: Resultado de la comparación del efecto de A en $b_1$ y $b_2$" width="60%" />
+<p class="caption">
+Figura 5.5: Modelo A2FMR en SPSS: Resultado de la comparación del efecto de A en <span class="math inline">\(b_1\)</span> y <span class="math inline">\(b_2\)</span>
+</p>
+</div>
+<p>Observamos que el efecto resulta ser significativo de tipo positivo por lo que el efecto de A es distinto en <span class="math inline">\(b_1\)</span> que en <span class="math inline">\(b_2\)</span>. En concreto, en <span class="math inline">\(b_1\)</span> el efecto de A vale -30. En cambio, en <span class="math inline">\(b_2\)</span> el efecto de A vale -150. Esto se aprecia muy bien en la gráfica:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="_main_files/figure-html/unnamed-chunk-8-1.png" alt="Gráfico de medias del ejemplo 5.1" width="672" />
+<p class="caption">
+Figura 5.6: Gráfico de medias del ejemplo 5.1
+</p>
+</div>
+<p>La segunda comparación entre los efectos simples sería la comparación del efecto de A cuando están presentes <span class="math inline">\(b_1\)</span> y <span class="math inline">\(b_3\)</span></p>
+<p><span class="math display">\[
+\phi_2 = \mu_{ausente.a0} - \mu_{presente.a0} -(\mu_{ausente.a8}  - \mu_{presente.a8})
+\]</span></p>
+<p>Creamos una nueva variable que denominamos <em>Contraste 2</em> de la siguiente forma:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="figurasR/contraste2_jamovi.png" alt="Modelo A2FMR en SPSS: Comparación de efectos simples" width="60%" />
+<p class="caption">
+Figura 5.7: Modelo A2FMR en SPSS: Comparación de efectos simples
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Los resultados obtenidos con este segundo contraste se muestran en la siguiente figura:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="figurasR/contraste2res_jamovi.png" alt="Modelo A2FMR en SPSS: Comparación de efectos simples" width="60%" />
+<p class="caption">
+Figura 5.8: Modelo A2FMR en SPSS: Comparación de efectos simples
+</p>
+</div>
+<p>Encontramos de nuevo que el efecto de A en <span class="math inline">\(b_1\)</span> es mucho menor que cuando está presente <span class="math inline">\(b_3\)</span>. El efecto de A en <span class="math inline">\(b1\)</span> vale -30. En cambio, cuando está presente <span class="math inline">\(b_3\)</span> el valor es -234.</p>
+<p>Para terminar nos queda ver si existen diferencias en el efecto de A cuando está presente <span class="math inline">\(b_2\)</span> en comparación con la presencia de <span class="math inline">\(b_3\)</span>. Sabemos que cuando está presente <span class="math inline">\(b_2\)</span> el efecto de A vale -150, mientras que cuando está presente <span class="math inline">\(b_3\)</span> vale -234. Para determinar la significación de esta comparación el procedimiento es el mismo que en los casos anteriores. Los resultados de este tercer contraste sería:</p>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="figurasR/contraste3_jamovi.png" alt="Modelo A2FMR en SPSS: Comparación de efectos simples" width="60%" />
+<p class="caption">
+Figura 5.9: Modelo A2FMR en SPSS: Comparación de efectos simples
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="figurasR/contraste3res_jamovi.png" alt="Modelo A2FMR en SPSS: Comparación de efectos simples" width="60%" />
+<p class="caption">
+Figura 5.10: Modelo A2FMR en SPSS: Comparación de efectos simples
+</p>
+</div>
+<p>Estos resultados indican que también existen diferencias en la comparación de los efectos simples.</p>
+<p><strong>Conclusiones según normas APA: Se encontró la existencia de interacción entre las variables <em>ángulo</em> y el <em>distractor</em> (F(2,18) = 45.31, p&lt; .001, <span class="math inline">\(\eta_p^{2}\)</span> = 0.67, indicando un TE grande). Se encontró que las diferencias en las medidas de presencia - ausencia con ángulo de 0 grados fueron menores cuando el ángulo fue de 4 grados (t(9)= 6.7, p &lt; .001). También la diferencia ausencia - presencia fue mayor a los 8 grados que a los 0 (t(9)= 9.1, p &lt; .001). Asimismo, el efecto de la presencia del ruido fue mayor a los 8 grados que a los 4 (t(9)= 3.5, p = .007)</strong></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diseño-factorial-mixto-a2fmx.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Tema5.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

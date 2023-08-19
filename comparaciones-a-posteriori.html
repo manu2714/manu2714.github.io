@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.5 Comparaciones a posteriori | Análisis de datos en psicología II</title>
+  <meta name="description" content="Libro de DAD2" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.5 Comparaciones a posteriori | Análisis de datos en psicología II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Libro de DAD2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.5 Comparaciones a posteriori | Análisis de datos en psicología II" />
+  
+  <meta name="twitter:description" content="Libro de DAD2" />
+  
+
+<meta name="author" content="Manuel Morales Ortiz" />
+
+
+<meta name="date" content="2023-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tamaño-del-efecto-1.html"/>
+<link rel="next" href="comparaciones-de-tendencia.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y Análisis de Datos II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
+<li class="chapter" data-level="1.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html"><i class="fa fa-check"></i><b>1.2</b> Validez de las investigaciones</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-las-variables-y-definiciones"><i class="fa fa-check"></i><b>1.2.1</b> Validez de las variables y definiciones</a></li>
+<li class="chapter" data-level="1.2.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-del-diseño-de-investigación"><i class="fa fa-check"></i><b>1.2.2</b> Validez del diseño de investigación</a></li>
+<li class="chapter" data-level="1.2.3" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-conclusión-estadística"><i class="fa fa-check"></i><b>1.2.3</b> Validez de conclusión estadística</a></li>
+<li class="chapter" data-level="1.2.4" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#contraste-de-hipótesis-estadísticas"><i class="fa fa-check"></i><b>1.2.4</b> Contraste de hipótesis estadísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="potencia-de-un-contraste.html"><a href="potencia-de-un-contraste.html"><i class="fa fa-check"></i><b>1.3</b> Potencia de un contraste</a></li>
+<li class="chapter" data-level="1.4" data-path="tamaño-del-efecto.html"><a href="tamaño-del-efecto.html"><i class="fa fa-check"></i><b>1.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="1.5" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><i class="fa fa-check"></i><b>1.5</b> Contrastes de hipótesis en los programas estadísticos</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-variable"><i class="fa fa-check"></i><b>1.5.1</b> Contrastes para 1 variable</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa"><i class="fa fa-check"></i><b>1.5.2</b> Contrastes para 1 VI cualitativa y una VD cuantitativa</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación"><i class="fa fa-check"></i><b>1.5.3</b> Pruebas para muestras relacionadas (2 medidas por unidad de observación)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><i class="fa fa-check"></i><b>2</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños transversales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="criterios-de-selección-de-la-técnica-estadística.html"><a href="criterios-de-selección-de-la-técnica-estadística.html"><i class="fa fa-check"></i><b>2.1</b> Criterios de selección de la técnica estadística</a></li>
+<li class="chapter" data-level="2.2" data-path="anova-de-1-factor-completamente-aleatorizado.html"><a href="anova-de-1-factor-completamente-aleatorizado.html"><i class="fa fa-check"></i><b>2.2</b> ANOVA de 1 factor completamente aleatorizado</a></li>
+<li class="chapter" data-level="2.3" data-path="comprobación-de-los-supuestos.html"><a href="comprobación-de-los-supuestos.html"><i class="fa fa-check"></i><b>2.3</b> 3.1. Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="2.4" data-path="tamaño-del-efecto-1.html"><a href="tamaño-del-efecto-1.html"><i class="fa fa-check"></i><b>2.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="2.5" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html"><i class="fa fa-check"></i><b>2.5</b> Comparaciones a posteriori</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#criterio-de-bonferroni"><i class="fa fa-check"></i><b>2.5.1</b> Criterio de Bonferroni</a></li>
+<li class="chapter" data-level="2.5.2" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#prueba-de-tukey"><i class="fa fa-check"></i><b>2.5.2</b> Prueba de Tukey</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="comparaciones-de-tendencia.html"><a href="comparaciones-de-tendencia.html"><i class="fa fa-check"></i><b>2.6</b> Comparaciones de tendencia</a></li>
+<li class="chapter" data-level="2.7" data-path="prueba-de-brown-forsythe.html"><a href="prueba-de-brown-forsythe.html"><i class="fa fa-check"></i><b>2.7</b> Prueba de Brown-Forsythe</a></li>
+<li class="chapter" data-level="2.8" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html"><i class="fa fa-check"></i><b>2.8</b> Prueba de Kuskal-Wallis (KW)</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html#comparaciones-a-posteriori-1"><i class="fa fa-check"></i><b>2.8.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="anova-de-un-factor-con-jamovi.html"><a href="anova-de-un-factor-con-jamovi.html"><i class="fa fa-check"></i><b>2.9</b> ANOVA de un factor con JAMOVI</a></li>
+<li class="chapter" data-level="2.10" data-path="anova-de-un-factor-con-spss.html"><a href="anova-de-un-factor-con-spss.html"><i class="fa fa-check"></i><b>2.10</b> ANOVA de un factor con SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><a href="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><i class="fa fa-check"></i><b>3</b> Diseños factoriales (I): Diseño factorial completamente aleatorizado (A2FCA)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modelo-estadístico.html"><a href="modelo-estadístico.html"><i class="fa fa-check"></i><b>3.1</b> Modelo estadístico</a></li>
+<li class="chapter" data-level="3.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html"><i class="fa fa-check"></i><b>3.2</b> Interacción entre factores</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-1-de-diseño-factorial"><i class="fa fa-check"></i><b>3.2.1</b> Ejemplo 1 de diseño factorial</a></li>
+<li class="chapter" data-level="3.2.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-2-de-diseño-factorial"><i class="fa fa-check"></i><b>3.2.2</b> Ejemplo 2 de diseño factorial</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="a2fc-con-el-programa-jamovi.html"><a href="a2fc-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>3.3</b> A2FC con el programa JAMOVI</a></li>
+<li class="chapter" data-level="3.4" data-path="a2fc-con-el-programa-spss.html"><a href="a2fc-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.4</b> A2FC con el programa SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-longitudinales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-longitudinales.html"><i class="fa fa-check"></i><b>4</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños longitudinales</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><a href="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><i class="fa fa-check"></i><b>4.1</b> Modelo ANOVA 1 factor de medidas repetidas (A1MR)</a></li>
+<li class="chapter" data-level="4.2" data-path="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>4.2</b> Ejemplo 1 de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="4.3" data-path="comprobación-de-los-supuestos-1.html"><a href="comprobación-de-los-supuestos-1.html"><i class="fa fa-check"></i><b>4.3</b> Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="4.4" data-path="tamaño-del-efecto-2.html"><a href="tamaño-del-efecto-2.html"><i class="fa fa-check"></i><b>4.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="4.5" data-path="potencia-de-la-prueba.html"><a href="potencia-de-la-prueba.html"><i class="fa fa-check"></i><b>4.5</b> Potencia de la prueba</a></li>
+<li class="chapter" data-level="4.6" data-path="comparaciones-múltiples.html"><a href="comparaciones-múltiples.html"><i class="fa fa-check"></i><b>4.6</b> Comparaciones múltiples</a></li>
+<li class="chapter" data-level="4.7" data-path="prueba-de-friedman.html"><a href="prueba-de-friedman.html"><i class="fa fa-check"></i><b>4.7</b> Prueba de Friedman</a></li>
+<li class="chapter" data-level="4.8" data-path="ejemplo-2-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-2-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>4.8</b> Ejemplo 2 de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="4.9" data-path="modelo-a1fmr-con-el-programa-jamovi.html"><a href="modelo-a1fmr-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>4.9</b> Modelo A1FMR con el programa JAMOVI</a></li>
+<li class="chapter" data-level="4.10" data-path="prueba-de-friedman-con-el-programa-jamovi.html"><a href="prueba-de-friedman-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>4.10</b> Prueba de Friedman con el programa JAMOVI</a></li>
+<li class="chapter" data-level="4.11" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html"><i class="fa fa-check"></i><b>4.11</b> Modelo A1FMR con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="4.11.1" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html#conclusiones-según-normas-apa"><i class="fa fa-check"></i><b>4.11.1</b> Conclusiones según normas APA:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.12" data-path="prueba-de-friedman-con-el-programa-spss.html"><a href="prueba-de-friedman-con-el-programa-spss.html"><i class="fa fa-check"></i><b>4.12</b> Prueba de Friedman con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="4.12.1" data-path="prueba-de-friedman-con-el-programa-spss.html"><a href="prueba-de-friedman-con-el-programa-spss.html#conclusiones"><i class="fa fa-check"></i><b>4.12.1</b> Conclusiones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><a href="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><i class="fa fa-check"></i><b>5</b> Diseños factoriales (II): Diseño factorial con medidas repetidas (A2FMR y A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html"><i class="fa fa-check"></i><b>5.1</b> Diseño factorial intrasujeto</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html#ejemplo-1-diseño-factorial-de-medidas-repetidas"><i class="fa fa-check"></i><b>5.1.1</b> Ejemplo 1: Diseño factorial de medidas repetidas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html"><i class="fa fa-check"></i><b>5.2</b> Diseño factorial mixto (A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html#ejemplo-2-diseño-factorial-mixto"><i class="fa fa-check"></i><b>5.2.1</b> Ejemplo 2: Diseño factorial mixto</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="análisis-del-ejemplo-1-con-spss.html"><a href="análisis-del-ejemplo-1-con-spss.html"><i class="fa fa-check"></i><b>5.3</b> Análisis del ejemplo 1 con SPSS</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="análisis-del-ejemplo-1-con-spss.html"><a href="análisis-del-ejemplo-1-con-spss.html#definición-de-variables"><i class="fa fa-check"></i><b>5.3.1</b> Definición de variables</a></li>
+<li class="chapter" data-level="5.3.2" data-path="análisis-del-ejemplo-1-con-spss.html"><a href="análisis-del-ejemplo-1-con-spss.html#estudio-de-la-interacción-1"><i class="fa fa-check"></i><b>5.3.2</b> Estudio de la interacción</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de datos en psicología II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="comparaciones-a-posteriori" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Comparaciones a posteriori<a href="comparaciones-a-posteriori.html#comparaciones-a-posteriori" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Si el contraste estadístico indica que existen diferencias significativas entre las variables resulta necesario determinar cuáles son esas diferencias. Para ello, se han propuesto distintos métodos. Aquí solo mencionaremos algunos de ellos: el procedimiento basado en el criterio de Bonferroni, el criterio de Sidak y la prueba de Tukey.</p>
+<div id="criterio-de-bonferroni" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Criterio de Bonferroni<a href="comparaciones-a-posteriori.html#criterio-de-bonferroni" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En un determinado estudio existen <span class="math inline">\({2 \choose n}\)</span> parejas de medias que han de ser comparadas. En el caso del ejemplo 1, tenemos que decidir si <span class="math inline">\(\mu_A \neq \mu_B\)</span>, <span class="math inline">\(\mu_A \neq \mu_C\)</span> ó
+<span class="math inline">\(\mu_C \neq \mu_B\)</span>. Si solo tuviéramos que realizar una comparación la tasa de error sería <span class="math inline">\(\alpha\)</span> (error tipo I). Si <span class="math inline">\(\alpha\)</span> vale 0,05 la probabilidad de cometer un error tipo I será 0,05. Sin embargo, cuando realizamos más de una comparación esta probabilidad será diferente. Mientras mayor sea el número de comparaciones a realizar, mayor será la probabilidad de rechazar la hipótesis nula cuando es verdadera (error tipo I). En nuestro caso, si tenemos que realizar 3 comparaciones la probabilidad de no cometer un error tipo I será:</p>
+<p><span class="math display">\[
+P(ningún\; error\; tipo\; I) = {3 \choose 0}.05^0.95^3 = 0.857
+\]</span></p>
+<p>Por lo que cometer algún error tipo I será 1 - 0,857 = 0,143. Es decir, la tasa de error tipo I aumenta a medida que aumentamos el número de comparaciones. En general, podemos considerar que la probabilidad de cometer al menos un error tipo I en <em>k</em> comparaciones utilizando <span class="math inline">\(\alpha\)</span> en cada comparación es:</p>
+<p><span class="math display">\[
+P(un\; error\; tipo\; I\;o\;mas) = 1 - (1 - \alpha)^k
+\]</span></p>
+<p>El criterio de Bonferroni es uno de los procedimientos utilizados para corregir la tasa de error. Consiste en dividir el nivel de significación <span class="math inline">\(\alpha\)</span> (habitualmente <span class="math inline">\(\alpha\)</span> = 0,05) por el número de comparaciones que pueden realizarse en el diseño. En nuestro ejemplo será <span class="math inline">\(\alpha_{CB}\)</span> = 0,05/3 = 0,01667. Esta corrección tiene sentido en el caso de que se aplique varias veces una misma prueba estadística en un estudio, ya que la probabilidad de rechazar <span class="math inline">\(H_0\)</span> aumenta a medida que se incrementan las comparaciones posibles. Un criterio ligeramente diferente es el propuesto por Sidak. Este método es algo menos conservador que el de Bonferroni, ya que se cumple que <span class="math inline">\(\alpha_{CB} \leq \alpha_{CS}\)</span> Con ambos criterios se asume que las comparaciones son independientes.</p>
+<p><span class="math display">\[
+\alpha_{CS} = 1 - (1 - \alpha)^{1/k}  
+\]</span></p>
+<p>Aplicado a los datos del ejemplo 1 tenemos:</p>
+<p><em>Comparación del grupo A con el C:</em></p>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  a and c
+## t = 3.8991, df = 8, p-value = 0.004551
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   6.128625 23.871375
+## sample estimates:
+## mean of x mean of y 
+##        25        10</code></pre>
+<p><em>Comparación del grupo C con el B:</em></p>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  c and b
+## t = -2.0197, df = 8, p-value = 0.0781
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -16.277442   1.077442
+## sample estimates:
+## mean of x mean of y 
+##      10.0      17.6</code></pre>
+<p>Encontramos que sólo existen diferencias significativas entre el grupo A de los individuos sanos y el grupo C de los niños con el tumos de meduloblastoma. Como el nivel de riesgo es igual a 0,005, menor que el criterio de significación de Bonferroni (0.0167) concluimos que existen diferencias significativas entre ambos grupos. Aplicando el criterio de Sidak obtendríamos las mismas conclusiones en este caso:</p>
+<p><span class="math display">\[
+\alpha_{CS} = 1 - (1 - \alpha)^{1/k}  = 1 - (1 - 0,05)^{1/3} = 0.01695
+\]</span></p>
+</div>
+<div id="prueba-de-tukey" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Prueba de Tukey<a href="comparaciones-a-posteriori.html#prueba-de-tukey" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se basa en la distribución del rango <em>estudentizado</em>. Esta distribución tiene en cuenta el número de comparaciones entre medias existentes en el diseño. Se parte de la obtención de lo que Tukey denominó diferencia de medias significativas (<em>DMS</em>) que es la diferencia mínima que debe existir entre dos medias para considerar que sus medias muestrales son distintas:</p>
+<p><span class="math display">\[
+DMS_{Tukey} = q_{J,N-J; 1- \alpha_{F}}\sqrt{MCE/n}
+\]</span></p>
+<p>donde <em>q</em> es el cuantil de la distribución del rango estudentizado que corresponde a un nivel de significación <span class="math inline">\(\alpha_F\)</span> con <em>J</em> medias y <em>N - J</em> grados de libertad. Aplicado al ejemplo 1 los resultados serían los siguientes:</p>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = aciertos ~ grupo)
+## 
+## $grupo
+##      diff      lwr     upr     p adj
+## B-A  -7.4 -18.5626  3.7626 0.2213224
+## C-A -15.0 -26.1626 -3.8374 0.0097002
+## C-B  -7.6 -18.7626  3.5626 0.2058874</code></pre>
+<p>En este caso también encontramos diferencias significativas entre
+los grupos A y C.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tamaño-del-efecto-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="comparaciones-de-tendencia.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Tema2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
