@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6.7 Análisis de regresión mediante el programa SPSS | Análisis de datos en psicología II</title>
+  <meta name="description" content="Libro de DAD2" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6.7 Análisis de regresión mediante el programa SPSS | Análisis de datos en psicología II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Libro de DAD2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6.7 Análisis de regresión mediante el programa SPSS | Análisis de datos en psicología II" />
+  
+  <meta name="twitter:description" content="Libro de DAD2" />
+  
+
+<meta name="author" content="Manuel Morales Ortiz" />
+
+
+<meta name="date" content="2023-08-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="análisis-de-regresión-mediante-el-programa-jamovi.html"/>
+<link rel="next" href="referencias.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y Análisis de Datos II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
+<li class="chapter" data-level="1.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html"><i class="fa fa-check"></i><b>1.2</b> Validez de las investigaciones</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-las-variables-y-definiciones"><i class="fa fa-check"></i><b>1.2.1</b> Validez de las variables y definiciones</a></li>
+<li class="chapter" data-level="1.2.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-del-diseño-de-investigación"><i class="fa fa-check"></i><b>1.2.2</b> Validez del diseño de investigación</a></li>
+<li class="chapter" data-level="1.2.3" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-conclusión-estadística"><i class="fa fa-check"></i><b>1.2.3</b> Validez de conclusión estadística</a></li>
+<li class="chapter" data-level="1.2.4" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#contraste-de-hipótesis-estadísticas"><i class="fa fa-check"></i><b>1.2.4</b> Contraste de hipótesis estadísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="potencia-de-un-contraste.html"><a href="potencia-de-un-contraste.html"><i class="fa fa-check"></i><b>1.3</b> Potencia de un contraste</a></li>
+<li class="chapter" data-level="1.4" data-path="tamaño-del-efecto.html"><a href="tamaño-del-efecto.html"><i class="fa fa-check"></i><b>1.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="1.5" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><i class="fa fa-check"></i><b>1.5</b> Contrastes de hipótesis en los programas estadísticos</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-variable"><i class="fa fa-check"></i><b>1.5.1</b> Contrastes para 1 variable</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa"><i class="fa fa-check"></i><b>1.5.2</b> Contrastes para 1 VI cualitativa y una VD cuantitativa</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación"><i class="fa fa-check"></i><b>1.5.3</b> Pruebas para muestras relacionadas (2 medidas por unidad de observación)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><i class="fa fa-check"></i><b>2</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños transversales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="criterios-de-selección-de-la-técnica-estadística.html"><a href="criterios-de-selección-de-la-técnica-estadística.html"><i class="fa fa-check"></i><b>2.1</b> Criterios de selección de la técnica estadística</a></li>
+<li class="chapter" data-level="2.2" data-path="anova-de-1-factor-completamente-aleatorizado.html"><a href="anova-de-1-factor-completamente-aleatorizado.html"><i class="fa fa-check"></i><b>2.2</b> ANOVA de 1 factor completamente aleatorizado</a></li>
+<li class="chapter" data-level="2.3" data-path="comprobación-de-los-supuestos.html"><a href="comprobación-de-los-supuestos.html"><i class="fa fa-check"></i><b>2.3</b> Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="2.4" data-path="tamaño-del-efecto-1.html"><a href="tamaño-del-efecto-1.html"><i class="fa fa-check"></i><b>2.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="2.5" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html"><i class="fa fa-check"></i><b>2.5</b> Comparaciones a posteriori</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#criterio-de-bonferroni"><i class="fa fa-check"></i><b>2.5.1</b> Criterio de Bonferroni</a></li>
+<li class="chapter" data-level="2.5.2" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#prueba-de-tukey"><i class="fa fa-check"></i><b>2.5.2</b> Prueba de Tukey</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="comparaciones-de-tendencia.html"><a href="comparaciones-de-tendencia.html"><i class="fa fa-check"></i><b>2.6</b> Comparaciones de tendencia</a></li>
+<li class="chapter" data-level="2.7" data-path="estadísticos-f-robustos-brown-forsythe-y-welch.html"><a href="estadísticos-f-robustos-brown-forsythe-y-welch.html"><i class="fa fa-check"></i><b>2.7</b> Estadísticos F robustos: Brown-Forsythe y Welch</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="estadísticos-f-robustos-brown-forsythe-y-welch.html"><a href="estadísticos-f-robustos-brown-forsythe-y-welch.html#comparaciones-a-posteriori-1"><i class="fa fa-check"></i><b>2.7.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html"><i class="fa fa-check"></i><b>2.8</b> Prueba de Kuskal-Wallis (KW)</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html#comparaciones-a-posteriori-2"><i class="fa fa-check"></i><b>2.8.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="anova-de-un-factor-con-jamovi.html"><a href="anova-de-un-factor-con-jamovi.html"><i class="fa fa-check"></i><b>2.9</b> ANOVA de un factor con JAMOVI</a></li>
+<li class="chapter" data-level="2.10" data-path="anova-de-un-factor-con-spss.html"><a href="anova-de-un-factor-con-spss.html"><i class="fa fa-check"></i><b>2.10</b> ANOVA de un factor con SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-ii-diseños-longitudinales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-ii-diseños-longitudinales.html"><i class="fa fa-check"></i><b>3</b> Relación entre una variable cualitativa y otra cuantitativa (II): Diseños longitudinales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><a href="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><i class="fa fa-check"></i><b>3.1</b> Modelo ANOVA 1 factor de medidas repetidas (A1MR)</a></li>
+<li class="chapter" data-level="3.2" data-path="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>3.2</b> Ejemplo 1 de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="3.3" data-path="comprobación-de-los-supuestos-1.html"><a href="comprobación-de-los-supuestos-1.html"><i class="fa fa-check"></i><b>3.3</b> Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="3.4" data-path="tamaño-del-efecto-2.html"><a href="tamaño-del-efecto-2.html"><i class="fa fa-check"></i><b>3.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="3.5" data-path="potencia-de-la-prueba.html"><a href="potencia-de-la-prueba.html"><i class="fa fa-check"></i><b>3.5</b> Potencia de la prueba</a></li>
+<li class="chapter" data-level="3.6" data-path="comparaciones-múltiples.html"><a href="comparaciones-múltiples.html"><i class="fa fa-check"></i><b>3.6</b> Comparaciones múltiples</a></li>
+<li class="chapter" data-level="3.7" data-path="prueba-de-friedman.html"><a href="prueba-de-friedman.html"><i class="fa fa-check"></i><b>3.7</b> Prueba de Friedman</a></li>
+<li class="chapter" data-level="3.8" data-path="ejemplo-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>3.8</b> Ejemplo de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="3.9" data-path="modelo-a1fmr-con-el-programa-jamovi.html"><a href="modelo-a1fmr-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>3.9</b> Modelo A1FMR con el programa JAMOVI</a></li>
+<li class="chapter" data-level="3.10" data-path="prueba-de-friedman-con-el-programa-jamovi.html"><a href="prueba-de-friedman-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>3.10</b> Prueba de Friedman con el programa JAMOVI</a></li>
+<li class="chapter" data-level="3.11" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.11</b> Modelo A1FMR con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html#conclusiones-según-normas-apa"><i class="fa fa-check"></i><b>3.11.1</b> Conclusiones según normas APA:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="prueba-de-friedman-con-el-programa-spss.html"><a href="prueba-de-friedman-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.12</b> Prueba de Friedman con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="3.12.1" data-path="prueba-de-friedman-con-el-programa-spss.html"><a href="prueba-de-friedman-con-el-programa-spss.html#conclusiones"><i class="fa fa-check"></i><b>3.12.1</b> Conclusiones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><a href="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><i class="fa fa-check"></i><b>4</b> Diseños factoriales (I): Diseño factorial completamente aleatorizado (A2FCA)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modelo-estadístico.html"><a href="modelo-estadístico.html"><i class="fa fa-check"></i><b>4.1</b> Modelo estadístico</a></li>
+<li class="chapter" data-level="4.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html"><i class="fa fa-check"></i><b>4.2</b> Interacción entre factores</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-1-de-diseño-factorial"><i class="fa fa-check"></i><b>4.2.1</b> Ejemplo 1 de diseño factorial</a></li>
+<li class="chapter" data-level="4.2.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-2-de-diseño-factorial"><i class="fa fa-check"></i><b>4.2.2</b> Ejemplo 2 de diseño factorial</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="a2fc-con-el-programa-jamovi.html"><a href="a2fc-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>4.3</b> A2FC con el programa JAMOVI</a></li>
+<li class="chapter" data-level="4.4" data-path="a2fc-con-el-programa-spss.html"><a href="a2fc-con-el-programa-spss.html"><i class="fa fa-check"></i><b>4.4</b> A2FC con el programa SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><a href="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><i class="fa fa-check"></i><b>5</b> Diseños factoriales (II): Diseño factorial con medidas repetidas (A2FMR y A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html"><i class="fa fa-check"></i><b>5.1</b> Diseño factorial intrasujeto</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html#ejemplo-1-diseño-factorial-de-medidas-repetidas"><i class="fa fa-check"></i><b>5.1.1</b> Ejemplo 1: Diseño factorial de medidas repetidas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html"><i class="fa fa-check"></i><b>5.2</b> Diseño factorial mixto (A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html#ejemplo-2-diseño-factorial-mixto"><i class="fa fa-check"></i><b>5.2.1</b> Ejemplo 2: Diseño factorial mixto</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html"><i class="fa fa-check"></i><b>5.3</b> Análisis de los ejemplos con SPSS</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-1-con-spss"><i class="fa fa-check"></i><b>5.3.1</b> Análisis del ejemplo 1 con SPSS</a></li>
+<li class="chapter" data-level="5.3.2" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-2-con-spss"><i class="fa fa-check"></i><b>5.3.2</b> Análisis del ejemplo 2 con SPSS</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modelos-de-regresión-lineal.html"><a href="modelos-de-regresión-lineal.html"><i class="fa fa-check"></i><b>6</b> Modelos de regresión lineal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="correlación.html"><a href="correlación.html"><i class="fa fa-check"></i><b>6.1</b> Correlación</a></li>
+<li class="chapter" data-level="6.2" data-path="regresión-simple.html"><a href="regresión-simple.html"><i class="fa fa-check"></i><b>6.2</b> Regresión simple</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="regresión-simple.html"><a href="regresión-simple.html#predictores-categóricos"><i class="fa fa-check"></i><b>6.2.1</b> Predictores categóricos</a></li>
+<li class="chapter" data-level="6.2.2" data-path="regresión-simple.html"><a href="regresión-simple.html#realización-de-pronósticos"><i class="fa fa-check"></i><b>6.2.2</b> Realización de pronósticos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="regresión-lineal-múltiple.html"><a href="regresión-lineal-múltiple.html"><i class="fa fa-check"></i><b>6.3</b> Regresión lineal múltiple</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="regresión-lineal-múltiple.html"><a href="regresión-lineal-múltiple.html#selección-de-modelos"><i class="fa fa-check"></i><b>6.3.1</b> Selección de modelos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="regresión-lineal-múltiple.html"><a href="regresión-lineal-múltiple.html#importancia-de-las-variables"><i class="fa fa-check"></i><b>6.3.2</b> Importancia de las variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="supuestos-del-modelo.html"><a href="supuestos-del-modelo.html"><i class="fa fa-check"></i><b>6.4</b> Supuestos del modelo</a></li>
+<li class="chapter" data-level="6.5" data-path="regresión-múltiple-y-modelos-estadísticos.html"><a href="regresión-múltiple-y-modelos-estadísticos.html"><i class="fa fa-check"></i><b>6.5</b> Regresión múltiple y modelos estadísticos</a></li>
+<li class="chapter" data-level="6.6" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html"><i class="fa fa-check"></i><b>6.6</b> Análisis de regresión mediante el programa JAMOVI</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html#regresión-lineal-múltiple-1"><i class="fa fa-check"></i><b>6.6.1</b> Regresión lineal múltiple</a></li>
+<li class="chapter" data-level="6.6.2" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html#modelo-de-moderación-con-jamovi"><i class="fa fa-check"></i><b>6.6.2</b> Modelo de moderación con JAMOVI</a></li>
+<li class="chapter" data-level="6.6.3" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html#modelos-de-mediación"><i class="fa fa-check"></i><b>6.6.3</b> Modelos de mediación</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html"><i class="fa fa-check"></i><b>6.7</b> Análisis de regresión mediante el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#selección-de-modelos-en-el-programa-spss"><i class="fa fa-check"></i><b>6.7.1</b> Selección de modelos en el programa SPSS</a></li>
+<li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de datos en psicología II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="análisis-de-regresión-mediante-el-programa-spss" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Análisis de regresión mediante el programa SPSS<a href="análisis-de-regresión-mediante-el-programa-spss.html#análisis-de-regresión-mediante-el-programa-spss" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El programa SPSS tiene un modulo específico para obtener las correlaciones:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="figurasR/cor_spss.png" alt="Módulo para realizar correlaciones en SPSS" width="30%" />
+<p class="caption">
+Figura 6.18: Módulo para realizar correlaciones en SPSS
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="figurasR/corres_spss.png" alt="Resultados de la opción de correlaciones en SPSS" width="30%" />
+<p class="caption">
+Figura 6.19: Resultados de la opción de correlaciones en SPSS
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Para realizar el modelo de regresión lineal hay que seleccionar la opción siguiente:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="figurasR/regSimple_spss.png" alt="Modulo para realizar el modelo de regresión en SPSS" width="200px" />
+<p class="caption">
+Figura 6.20: Modulo para realizar el modelo de regresión en SPSS
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="figurasR/regSimpleres_spss.png" alt="Resultados el modelo de regresión en SPSS" width="200px" />
+<p class="caption">
+Figura 6.21: Resultados el modelo de regresión en SPSS
+</p>
+</div>
+<div id="selección-de-modelos-en-el-programa-spss" class="section level3 hasAnchor" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> Selección de modelos en el programa SPSS<a href="análisis-de-regresión-mediante-el-programa-spss.html#selección-de-modelos-en-el-programa-spss" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="procedimiento-de-pasos-sucesivos" class="section level4 hasAnchor" number="6.7.1.1">
+<h4><span class="header-section-number">6.7.1.1</span> Procedimiento de pasos sucesivos<a href="análisis-de-regresión-mediante-el-programa-spss.html#procedimiento-de-pasos-sucesivos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Este procedimiento puede realizarse hacia adelante, hacia atrás o mediante una combinación de ambos procedimientos. El método de selección hacia adelante comienza con el modelo nulo (modelo sin predictores) empezando a introducir los predictores uno a uno. Se incluye el predictor con menor nivel de significación (p(F)&lt;.05). A continuación, se vuelve a realizar un análisis de regresión sobre la variable dependiente sin el predictor previamente introducido. Nuevamente, se vuelve a seleccionar aquel predictor con menor nivel de significación. Este procedimiento continua hasta que los predictores restantes no cumplen el criterio o no queda ningún predictor por introducir.</p>
+<p>Continuando con el mismo ejemplo, vamos a utilizar el procedimiento hacia adelante para seleccionar un modelo. Para ello, seleccionamos en el SPSS y marcamos las opciones de tal y como aparece en la siguiente figura:</p>
+<p>Mediante este procedimiento sólo se incluye la variable edad, ya que es la única que cumple el criterio (SPSS utiliza como criterio de entrada <span class="math inline">\(p(F) \leq.05)\)</span>. El resto de variables son excluidas por no cumplir dicho criterio.</p>
+<p>El método de selección hacia atrás comienza con el modelo máximo. En cada paso, se elimina aquel predictor que cumple el criterio de eliminación (p(F)&gt;.05) y con mayor nivel de significación. Este procedimiento continua hasta que todos los predictores presentes en el modelo son significativos o no quedan predictores en el modelo. Utilizando el mismo modelo, pero cambiando la opción de Método por tal y como aparece en la siguiente figura nos encontramos que el programa comienza con el modelo máximo (las tres variables incluidas) y elimina aquellas variables que no cumplen el criterio (p(F)&lt; .1). el resultado final es el mismo que en el caso anterior:</p>
+<p>El método de selección por pasos sucesivos es una combinación de ambos y que presenta la diferencia de que en este procedimiento una variable que ha salido en una etapa puede volver a entrar en otro. Lo mismo puede decirse para aquellas variables que han entrado en un momento determinado y que pueden salir en una fase posterior <span class="citation">(<a href="referencias.html#ref-ato">Ato &amp; Vallejo, 2007</a>)</span>. Los resultados aplicados al modelo anterior son idénticos.</p>
+<p>En resumen pues, los tres procedimientos obtienen al final un modelo de regresión en el que la única variable predictora significativa es la edad. Los resultados finales del modelo se incluyen en la siguiente tabla:</p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes" class="section level3 hasAnchor" number="6.7.2">
+<h3><span class="header-section-number">6.7.2</span> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(<a href="referencias.html#ref-hayes">Hayes, 2013</a>)</span><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una vez instalado aparece dentro del módulo de regresión de SPSS:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="figurasR/process_spss.png" alt="Módulo de PROCESS en SPSS" width="300px" />
+<p class="caption">
+Figura 6.22: Módulo de PROCESS en SPSS
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Para estudiar ambos modelos se introducen las variables y se selecciona el modelo 1 para estudiar la moderación y el 4 para el modelo simple de mediación.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="figurasR/mod_process1.png" alt="Interfaz del módulo PROCESS en SPSS para el estudio de la moderación" width="400px" />
+<p class="caption">
+Figura 6.23: Interfaz del módulo PROCESS en SPSS para el estudio de la moderación
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>El módulo de PROCESS para analizar la interacción presenta una serie de opciones para ajustar los resultados del modelo de moderación en función de las características de nuestros datos:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="figurasR/mod_process2.png" alt="Opciones del modelo de moderación en SPSS con el módulo PROCESS" width="300px" />
+<p class="caption">
+Figura 6.24: Opciones del modelo de moderación en SPSS con el módulo PROCESS
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Los resultados de este modelo se presentan a continuación:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<img src="figurasR/mod_process4.png" alt="Resultados del modelo de moderación en SPSS con el módulo PROCESS" width="400px" />
+<p class="caption">
+Figura 6.25: Resultados del modelo de moderación en SPSS con el módulo PROCESS
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>El modelo de mediación presenta la misma interfaz que el modelo de moderación. Simplemente habrá que indicar la opción 4 en el cuadro de “Model number”:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
+<img src="figurasR/med_process1b.png" alt="Resultados del modelo de moderación en SPSS con el módulo PROCESS" width="400px" />
+<p class="caption">
+Figura 6.26: Resultados del modelo de moderación en SPSS con el módulo PROCESS
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Los resultados del modelo de mediación se presentan a continuación:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="figurasR/med_process2.png" alt="Resultados del modelo de moderación en SPSS con el módulo PROCESS" width="400px" />
+<p class="caption">
+Figura 6.27: Resultados del modelo de moderación en SPSS con el módulo PROCESS
+</p>
+</div>
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="análisis-de-regresión-mediante-el-programa-jamovi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-Tema6.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

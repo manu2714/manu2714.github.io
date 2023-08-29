@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.5 Contrastes de hipótesis en los programas estadísticos | Diseño y Análisis de datos II</title>
+  <meta name="description" content="Libro de DAD2" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.5 Contrastes de hipótesis en los programas estadísticos | Diseño y Análisis de datos II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Libro de DAD2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.5 Contrastes de hipótesis en los programas estadísticos | Diseño y Análisis de datos II" />
+  
+  <meta name="twitter:description" content="Libro de DAD2" />
+  
+
+<meta name="author" content="Manuel Morales Ortiz" />
+
+
+<meta name="date" content="2023-08-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tamaño-del-efecto.html"/>
+<link rel="next" href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y Análisis de Datos II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
+<li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
+<li class="chapter" data-level="1.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html"><i class="fa fa-check"></i><b>1.2</b> Validez de las investigaciones</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-las-variables-y-definiciones"><i class="fa fa-check"></i><b>1.2.1</b> Validez de las variables y definiciones</a></li>
+<li class="chapter" data-level="1.2.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-del-diseño-de-investigación"><i class="fa fa-check"></i><b>1.2.2</b> Validez del diseño de investigación</a></li>
+<li class="chapter" data-level="1.2.3" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-conclusión-estadística"><i class="fa fa-check"></i><b>1.2.3</b> Validez de conclusión estadística</a></li>
+<li class="chapter" data-level="1.2.4" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#contraste-de-hipótesis-estadísticas"><i class="fa fa-check"></i><b>1.2.4</b> Contraste de hipótesis estadísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="potencia-de-un-contraste.html"><a href="potencia-de-un-contraste.html"><i class="fa fa-check"></i><b>1.3</b> Potencia de un contraste</a></li>
+<li class="chapter" data-level="1.4" data-path="tamaño-del-efecto.html"><a href="tamaño-del-efecto.html"><i class="fa fa-check"></i><b>1.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="1.5" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><i class="fa fa-check"></i><b>1.5</b> Contrastes de hipótesis en los programas estadísticos</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-variable"><i class="fa fa-check"></i><b>1.5.1</b> Contrastes para 1 variable</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa"><i class="fa fa-check"></i><b>1.5.2</b> Contrastes para 1 VI cualitativa y una VD cuantitativa</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación"><i class="fa fa-check"></i><b>1.5.3</b> Pruebas para muestras relacionadas (2 medidas por unidad de observación)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><i class="fa fa-check"></i><b>2</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños transversales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="criterios-de-selección-de-la-técnica-estadística.html"><a href="criterios-de-selección-de-la-técnica-estadística.html"><i class="fa fa-check"></i><b>2.1</b> Criterios de selección de la técnica estadística</a></li>
+<li class="chapter" data-level="2.2" data-path="anova-de-1-factor-completamente-aleatorizado.html"><a href="anova-de-1-factor-completamente-aleatorizado.html"><i class="fa fa-check"></i><b>2.2</b> ANOVA de 1 factor completamente aleatorizado</a></li>
+<li class="chapter" data-level="2.3" data-path="comprobación-de-los-supuestos.html"><a href="comprobación-de-los-supuestos.html"><i class="fa fa-check"></i><b>2.3</b> 3.1. Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="2.4" data-path="tamaño-del-efecto-1.html"><a href="tamaño-del-efecto-1.html"><i class="fa fa-check"></i><b>2.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="2.5" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html"><i class="fa fa-check"></i><b>2.5</b> Comparaciones a posteriori</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#criterio-de-bonferroni"><i class="fa fa-check"></i><b>2.5.1</b> Criterio de Bonferroni</a></li>
+<li class="chapter" data-level="2.5.2" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#prueba-de-tukey"><i class="fa fa-check"></i><b>2.5.2</b> Prueba de Tukey</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="comparaciones-de-tendencia.html"><a href="comparaciones-de-tendencia.html"><i class="fa fa-check"></i><b>2.6</b> Comparaciones de tendencia</a></li>
+<li class="chapter" data-level="2.7" data-path="prueba-de-brown-forsythe.html"><a href="prueba-de-brown-forsythe.html"><i class="fa fa-check"></i><b>2.7</b> Prueba de Brown-Forsythe</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="prueba-de-brown-forsythe.html"><a href="prueba-de-brown-forsythe.html#comparaciones-a-posteriori-1"><i class="fa fa-check"></i><b>2.7.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html"><i class="fa fa-check"></i><b>2.8</b> Prueba de Kuskal-Wallis (KW)</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html#comparaciones-a-posteriori-2"><i class="fa fa-check"></i><b>2.8.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="anova-de-un-factor-con-jamovi.html"><a href="anova-de-un-factor-con-jamovi.html"><i class="fa fa-check"></i><b>2.9</b> ANOVA de un factor con JAMOVI</a></li>
+<li class="chapter" data-level="2.10" data-path="anova-de-un-factor-con-spss.html"><a href="anova-de-un-factor-con-spss.html"><i class="fa fa-check"></i><b>2.10</b> ANOVA de un factor con SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>3</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modelo-estadístico.html"><a href="modelo-estadístico.html"><i class="fa fa-check"></i><b>3.1</b> Modelo estadístico</a></li>
+<li class="chapter" data-level="3.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html"><i class="fa fa-check"></i><b>3.2</b> Interacción entre factores</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-de-diseño-factorial"><i class="fa fa-check"></i><b>3.2.1</b> Ejemplo de diseño factorial</a></li>
+<li class="chapter" data-level="3.2.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-3.2"><i class="fa fa-check"></i><b>3.2.2</b> Ejemplo 3.2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="a2fc-con-el-programa-spss.html"><a href="a2fc-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.3</b> A2FC con el programa SPSS</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y Análisis de datos II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="contrastes-de-hipótesis-en-los-programas-estadísticos" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Contrastes de hipótesis en los programas estadísticos<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-de-hipótesis-en-los-programas-estadísticos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="contrastes-para-1-variable" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Contrastes para 1 variable<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El árbol de decisión para estos contrastes es el siguiente:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="figurasR/esquemabicondicionales2.jpg" alt="Contrastes para 1 variable" height="250px" />
+<p class="caption">
+Figura 1.3: Contrastes para 1 variable
+</p>
+</div>
+<div id="prueba-t-para-1-muestra-mediante-el-programa-jamovi" class="section level4 hasAnchor" number="1.5.1.1">
+<h4><span class="header-section-number">1.5.1.1</span> Prueba t para 1 muestra mediante el programa JAMOVI<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-t-para-1-muestra-mediante-el-programa-jamovi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se selecciona el módulo de <em>“Pruebas T” y marcamos la opción </em>”Prueba T para una muestra”. En la ventana de la prueba T para una muestra aparece por defecto marcada la prueba T y marcando la opción de <em>“Comprobación de supuestos”</em> puede obtenerse el resultado de la prueba de normalidad. Para realizar el análisis es necesario indicar el valor de prueba en la sección de <em>“Hipótesis”</em> ( en nuestro ejemplo se ha introducido el valor de 47). Por defecto, aparece marcada la opción del contraste bilateral aunque existen opciones para los contrastes unilaterales. Asimismo, tendríamos que marcar la opción de <em>“Rangos de Wilcoxon”</em> en el caso de que no se acepte la hipótesis de normalidad.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="figurasR/T1jamovi.png" alt="Prueba t para una muestra en JAMOVI" width="60%" />
+<p class="caption">
+Figura 1.4: Prueba t para una muestra en JAMOVI
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="figurasR/T1bjamovi.png" alt="Prueba t para una muestra en JAMOVI" width="60%" />
+<p class="caption">
+Figura 1.5: Prueba t para una muestra en JAMOVI
+</p>
+</div>
+</div>
+<div id="prueba-t-para-1-muestra-en-el-programa-spss" class="section level4 hasAnchor" number="1.5.1.2">
+<h4><span class="header-section-number">1.5.1.2</span> Prueba t para 1 muestra en el programa SPSS<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-t-para-1-muestra-en-el-programa-spss" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Vamos a presentar la forma de realizar algunos contrastes estadísticos que se utilizarán en esta asignatura a modo de recordatorio, ya que fueron estudiados en otras asignaturas.</p>
+<div id="prueba-de-normalidad-de-shapiro-wilk" class="section level5 hasAnchor" number="1.5.1.2.1">
+<h5><span class="header-section-number">1.5.1.2.1</span> Prueba de normalidad de Shapiro-Wilk<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-de-normalidad-de-shapiro-wilk" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>El árbol de decisión para estos contrastes es el siguiente:</p>
+<p>Para determinar la normalidad será necesario aplicar la prueba de Shapiro-Wilk.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="figurasR/shapiro1.jpg" alt="Prueba de normalidad Shapiro-Wilks en el programa SPSS" width="70%" />
+<p class="caption">
+Figura 1.6: Prueba de normalidad Shapiro-Wilks en el programa SPSS
+</p>
+</div>
+<p>En el programa SPSS se hace marcando <em>Analizar + Explorar + Gráficos + Gráficos con pruebas de normalidad</em>. Los resultados obtenidos pueden observarse en la imagen más a la derecha:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="figurasR/shapiro2.jpg" alt="Prueba de normalidad en SPSS" width="300px" />
+<p class="caption">
+Figura 1.7: Prueba de normalidad en SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
+<img src="figurasR/shapiro3.jpg" alt="Prueba de normalidad en SPSS" width="200px" />
+<p class="caption">
+Figura 1.8: Prueba de normalidad en SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
+<img src="figurasR/shapiro4b.png" alt="Resultados de la prueba de normalidad" width="300px" />
+<p class="caption">
+Figura 1.9: Resultados de la prueba de normalidad
+</p>
+</div>
+<p>La prueba t para 1 muestra se realiza marcando <em>Analizar + Comparar medias + Prueba T para una muestra</em>:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<img src="figurasR/t1.jpg" alt="Prueba t para una muestra en el programa SPSS" width="250px" />
+<p class="caption">
+Figura 1.10: Prueba t para una muestra en el programa SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<img src="figurasR/t2.jpg" alt="Prueba t para una muestra en el programa SPSS" width="300px" />
+<p class="caption">
+Figura 1.11: Prueba t para una muestra en el programa SPSS
+</p>
+</div>
+<p>será necesario introducir la VD a estudiar en el cuadro de ``Variable a contrastar’’. El valor del contraste es cero por defecto, pero habrá que introducir el valor de la hipótesis a contrastar.</p>
+</div>
+<div id="prueba-de-wilcoxon-para-una-muestra" class="section level5 hasAnchor" number="1.5.1.2.2">
+<h5><span class="header-section-number">1.5.1.2.2</span> Prueba de Wilcoxon para una muestra<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-de-wilcoxon-para-una-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Necesitamos marcar <em>Analizar + Pruebas no paramétricas + Cuadro de diálogos antiguos + 2 muestras relacionadas</em>. Observamos que el programa SPSS nos pide introducir dos variables, ya que esta prueba está diseñada para estudiar la relación entre dos variables. Sin embargo, puede utilizarse introduciendo la variable en cuestión y como segunda variable una nueva que hemos creado con el valor de contraste de nuestras hipótesis (en la figura aparece con el nombre de Mdn):</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
+<img src="figurasR/wilcox1.jpg" alt="Prueba de Wilcoxon en el SPSS" width="250px" />
+<p class="caption">
+Figura 1.12: Prueba de Wilcoxon en el SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<img src="figurasR/wilcox2.jpg" alt="Prueba de Wilcoxon en el SPSS" width="300px" />
+<p class="caption">
+Figura 1.13: Prueba de Wilcoxon en el SPSS
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Contrastes para 1 VI cualitativa y una VD cuantitativa<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El árbol de decisión para los diseños en los que solo hay 1 medida por sujeto (muestras independientes) es:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-26"></span>
+<img src="figurasR/esquemabicondicionales.jpg" alt="Técnicas para dos muestras independientes"  />
+<p class="caption">
+Figura 1.14: Técnicas para dos muestras independientes
+</p>
+</div>
+<div id="prueba-t-para-muestras-independientes-en-jamovi" class="section level4 hasAnchor" number="1.5.2.1">
+<h4><span class="header-section-number">1.5.2.1</span> Prueba t para muestras independientes en JAMOVI<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-t-para-muestras-independientes-en-jamovi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se selecciona la opción de muestras independientes en el modulo de <em>“Pruebas T”</em>. Se introduce la variable dependiente (cuantitativa) en el cuadro de <em>“Variables dependientes</em> y la variable cualitativa en el cuadro de <em>“Variable de agrupación”</em>. Se seleccionan las opciones para comprobar los supuestos de la prueba y se elige la prueba (T de student, T de Welch o U de Mann-Whitney), dependiendo de los supuestos que se cumplan.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
+<img src="figurasR/TMI_jamovi.png" alt="Prueba t para muestras independientes en JAMOVI" width="70%" />
+<p class="caption">
+Figura 1.15: Prueba t para muestras independientes en JAMOVI
+</p>
+</div>
+</div>
+<div id="prueba-t-para-muestras-independientes-en-spss" class="section level4 hasAnchor" number="1.5.2.2">
+<h4><span class="header-section-number">1.5.2.2</span> Prueba t para muestras independientes en SPSS<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-t-para-muestras-independientes-en-spss" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se realiza marcando <em>Analizar + Comparar medias + Prueba T para muestras independientes</em>:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-28"></span>
+<img src="figurasR/t21.png" alt="Prueba t para muestras independientes en SPSS" width="60%" />
+<p class="caption">
+Figura 1.16: Prueba t para muestras independientes en SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<img src="figurasR/t22.png" alt="Prueba t para muestras independientes en SPSS" width="70%" />
+<p class="caption">
+Figura 1.17: Prueba t para muestras independientes en SPSS
+</p>
+</div>
+</div>
+<div id="prueba-u-de-mann-whitney-para-muestras-independientes-en-spss" class="section level4 hasAnchor" number="1.5.2.3">
+<h4><span class="header-section-number">1.5.2.3</span> Prueba U de Mann-Whitney para muestras independientes en SPSS<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-u-de-mann-whitney-para-muestras-independientes-en-spss" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se obtiene marcando <em>Analizar + Pruebas no paramétricas + Cuadro de diálogos antiguos + 2 muestras independientes</em>.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-30"></span>
+<img src="figurasR/u1.jpg" alt="Prueba U para muestras independientes en SPSS" width="70%" />
+<p class="caption">
+Figura 1.18: Prueba U para muestras independientes en SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-31"></span>
+<img src="figurasR/u2.jpg" alt="Prueba U para muestras independientes en SPSS" width="70%" />
+<p class="caption">
+Figura 1.19: Prueba U para muestras independientes en SPSS
+</p>
+</div>
+</div>
+</div>
+<div id="pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Pruebas para muestras relacionadas (2 medidas por unidad de observación)<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El árbol de decisión para este apartado es el siguiente:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
+<img src="figurasR/esquemabicondicionales2.jpg" alt="Pruebas para dos muestras relacionadas"  />
+<p class="caption">
+Figura 1.20: Pruebas para dos muestras relacionadas
+</p>
+</div>
+<p>La variable sobre la que se realiza el contraste es la diferencia entre las medidas de los dos momentos. Por tanto, el análisis de estos diseños se convierte en el análisis sobre 1 muestra que ya se ha estudiado anteriormente.</p>
+<div id="prueba-t-para-muestras-relacionadas-en-el-programa-jamovi" class="section level4 hasAnchor" number="1.5.3.1">
+<h4><span class="header-section-number">1.5.3.1</span> Prueba t para muestras relacionadas en el programa JAMOVI<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-t-para-muestras-relacionadas-en-el-programa-jamovi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se selecciona la opción de <em>“Muestras Apareadas”</em> en el modulo de <em>“Pruebas T”</em>. Se introduce las dos variables dependientes (cuantitativas) en el cuadro de <em>“Variables Apareadas”. Se selecciona la opción para </em>Comprobación de supuestos” de la prueba y se elige la prueba (T de student o W de Wilcoxon), dependiendo de que se cumpla el supuesto de normalidad.Estos resultados son los mismos que si se hubieran calculado la diferencia entre las dos medidas y se hubiera aplicado la prueba T para una muestra.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
+<img src="figurasR/tmr1_jamovi.png" alt="Prueba t para muestras relacionadas en JAMOVI" width="70%" />
+<p class="caption">
+Figura 1.21: Prueba t para muestras relacionadas en JAMOVI
+</p>
+</div>
+</div>
+<div id="prueba-t-para-muestras-relacionadas-en-el-programa-spss" class="section level4 hasAnchor" number="1.5.3.2">
+<h4><span class="header-section-number">1.5.3.2</span> Prueba t para muestras relacionadas en el programa SPSS<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-t-para-muestras-relacionadas-en-el-programa-spss" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se realiza marcando <em>Analizar + Comparar medias + Prueba T para muestras relacionadas</em>:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<img src="figurasR/tmr3.jpg" alt="Prueba t para muestras relacionadas en SPSS" width="50%" />
+<p class="caption">
+Figura 1.22: Prueba t para muestras relacionadas en SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
+<img src="figurasR/tmr4.jpg" alt="Prueba t para muestras relacionadas en SPSS" width="70%" />
+<p class="caption">
+Figura 1.23: Prueba t para muestras relacionadas en SPSS
+</p>
+</div>
+<div id="prueba-de-wilcoxon-para-2-muestras-relacionadas" class="section level5 hasAnchor" number="1.5.3.2.1">
+<h5><span class="header-section-number">1.5.3.2.1</span> Prueba de Wilcoxon para 2 muestras relacionadas<a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#prueba-de-wilcoxon-para-2-muestras-relacionadas" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Necesitamos marcar <em>Analizar + Pruebas no paramétricas + Cuadro de diálogos antiguos + 2 muestras relacionadas</em>.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
+<img src="figurasR/wilcox23.jpg" alt="Prueba de Wilcoxon para muestras relacionadas en SPSS" width="70%" />
+<p class="caption">
+Figura 1.24: Prueba de Wilcoxon para muestras relacionadas en SPSS
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
+<img src="figurasR/wilcox24.jpg" alt="Prueba de Wilcoxon para muestras relacionadas en SPSS" width="70%" />
+<p class="caption">
+Figura 1.25: Prueba de Wilcoxon para muestras relacionadas en SPSS
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tamaño-del-efecto.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-Tema1.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
