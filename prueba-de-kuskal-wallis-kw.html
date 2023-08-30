@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -98,7 +162,7 @@ div.csl-indent {
 <li><a href="./">Análisis de Datos II</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
 <li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
@@ -216,6 +280,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -239,10 +304,10 @@ div.csl-indent {
 <div id="prueba-de-kuskal-wallis-kw" class="section level2 hasAnchor" number="2.8">
 <h2><span class="header-section-number">2.8</span> Prueba de Kuskal-Wallis (KW)<a href="prueba-de-kuskal-wallis-kw.html#prueba-de-kuskal-wallis-kw" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Esta prueba no necesita que se cumplan los supuestos de normalidad y homogeneidad propias del ANOVA. Además, puede utilizarse cuando los datos son de tipo ordinal. Este método pretende contrastar la hipótesis de que <em>J</em> muestras aleatorias independientes proceden de la misma población (o de distintas poblaciones). Para ello, se asignan rangos desde 1 hasta N al conjunto de las <span class="math inline">\(Y_{ij}\)</span> observaciones del diseño como si fuera un única muestra (si hay empates se aplica el promedio de los rangos implicados). Al final se obtiene un rango <span class="math inline">\(R_{ij}\)</span> para cada una de las observaciones.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
-<img src="figurasR/kw1c.png" alt="Prueba de Kruskall-Wallis" width="70%" />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-46"></span>
+<img src="figurasR/kw1c.png" alt="Esquema del diseño para la prueba de Kruskall-Wallis" width="70%" />
 <p class="caption">
-Figura 2.4: Prueba de Kruskall-Wallis
+Figura 2.4: Esquema del diseño para la prueba de Kruskall-Wallis
 </p>
 </div>
 <p>El estadístico H de Kruskal-Wallis viene definido de la siguiente forma:</p>
@@ -250,9 +315,101 @@ Figura 2.4: Prueba de Kruskall-Wallis
 H = \frac{12}{N(N+1)}\sum_{j=1}^{J}\frac{R_j}{n_j} - 3(N - 1)
 \]</span></p>
 <p>Bajo la hipótesis nula de que las <em>J</em> poblaciones tienen la misma forma, el estadístico H se distribuye según un modelo de probabilidad <em>ji-cuadrado</em> con <em>J - 1</em> grados de libertad. El rechazo de esta hipótesis supone que los <em>J</em> promedios comparados no son iguales.</p>
-<p><em>Ejemplo 2:</em></p>
+<p><em>Ejemplo 2.2:</em></p>
 <p>Supongamos que estamos interesados en el estudio de los 3 métodos de enseñanza para mejorar el rendimiento de los escolares. Los resultados fueron los siguientes:</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<table>
+<caption>
+<span id="tab:Ej2">Tabla 2.1: </span>Datos del ejemplo 2.2
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+A
+</th>
+<th style="text-align:right;">
+B
+</th>
+<th style="text-align:right;">
+C
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+s1
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s2
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s3
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s4
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s5
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="_main_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
 <p>Observamos que los grupos son bastante asimétricos. En particular, se tiene que el grupo B muestra una distribución muy alejada de la normalidad. Esto puede comprobarse mediante el estadístico de Shapiro-Wilks:</p>
 <p><em>Media del grupo A:</em></p>
 <pre><code>## 
@@ -273,42 +430,128 @@ H = \frac{12}{N(N+1)}\sum_{j=1}^{J}\frac{R_j}{n_j} - 3(N - 1)
 ## data:  aciertos2[11:15]
 ## W = 0.82664, p-value = 0.1313</code></pre>
 <p>En este caso es adecuado aplicar el estadístico de Kruskal- Wallis.</p>
-<pre><code>## |-------------------------------------|
-## | misty 0.4.12 (2023-07-08)           |
-## | Miscellaneous Functions T. Yanagida |
-## |-------------------------------------|</code></pre>
 <pre><code>Kruskal-Wallis rank sum test</code></pre>
 <p>data: aciertos2 by grupo
 Kruskal-Wallis chi-squared = 7.6473, df = 2, p-value = 0.02185</p>
-<p>En el cuadro 5 aparece el rango para cada una de las puntuaciones. Calculando las medias de los rangos de cada uno de los grupos observamos que las menores puntuaciones están en el grupo C seguido del grupo B:</p>
+<table>
+<caption>
+<span id="tab:unnamed-chunk-51">Tabla 2.2: </span>Rangos del ejemplo 2.2
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+A
+</th>
+<th style="text-align:right;">
+B
+</th>
+<th style="text-align:right;">
+C
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+s1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+10.5
+</td>
+<td style="text-align:right;">
+3.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s2
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+3.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s3
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+10.5
+</td>
+<td style="text-align:right;">
+7.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s4
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+9.0
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s5
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+5.0
+</td>
+</tr>
+</tbody>
+</table>
+<p>En la tabla 2.5 aparece el rango para cada una de las puntuaciones. Calculando las medias de los rangos de cada uno de los grupos observamos que las menores puntuaciones están en el grupo C seguido del grupo B:</p>
 <p><em>Media del grupo A:</em></p>
 <pre><code>## [1] 12</code></pre>
 <p><em>Media del grupo B:</em></p>
 <pre><code>## [1] 7.8</code></pre>
 <p><em>Media del grupo C:</em></p>
 <pre><code>## [1] 4.2</code></pre>
-<p>Al igual que en el caso del ANOVA, para conocer cuáles son las diferencias significativas entre los grupo será necesario realizar una prueba <em>post-hoc</em>.</p>
+<p>Al igual que en el caso del ANOVA, para conocer cuáles son las diferencias significativas entre los grupos será necesario realizar una prueba <em>post-hoc</em>.</p>
 <div id="comparaciones-a-posteriori-2" class="section level3 hasAnchor" number="2.8.1">
 <h3><span class="header-section-number">2.8.1</span> Comparaciones a posteriori<a href="prueba-de-kuskal-wallis-kw.html#comparaciones-a-posteriori-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Cuando no se cumplen los supuestos de aplicación del ANOVA las comparaciones a posteriori se realizan mediante la técnica <em>U de Mann-Whitney</em> (MW)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Esta prueba sirve, al igual que la prueba T de Student para comparar dos muestras independientes. Resulta útil cuando no se cumple la hipótesis de normalidad o los datos son ordinales.</p>
+<p>Cuando no se cumplen los supuestos de aplicación del ANOVA las comparaciones a posteriori se realizan mediante la técnica <em>U de Mann-Whitney</em> (MW)<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. Esta prueba sirve, al igual que la prueba T de Student para comparar dos muestras independientes. Resulta útil cuando no se cumple la hipótesis de normalidad o los datos son ordinales.</p>
 <p>Sean dos muestras aleatorias de tamaño <span class="math inline">\(n_1\)</span> y <span class="math inline">\(n_2\)</span>. Sea <span class="math inline">\(R_{i}\)</span> el rango asignado a cada una de las puntuaciones cuando se toman todas en conjunto como si fuera una única muestra. A continuación, se calculan los siguientes estadísticos <span class="math inline">\(S_1\)</span> y <span class="math inline">\(S_2\)</span> que corresponden a la suma de los rangos de las observaciones del grupo 1 y grupo 2 respectivamente:</p>
 <p><span class="math display">\[
 S_1 = \sum_{i=1}^{n_1}R_{i1} \qquad y \qquad S_2 = \sum_{i=1}^{n_2}R_{i2}
 \]</span>
-Como la suma de los N rangos vale N(N+1)/2 se verifica que:</p>
+Se verifica que la suma de los N rangos vale <span class="citation">(<a href="referencias.html#ref-pardo">A. Pardo &amp; SanMartin, 2010</a>)</span>:</p>
 <p><span class="math display">\[
 S_1 + S_2 = \frac{N(N+1)}{2}
 \]</span></p>
 <p>Si se asume que las dos muestras proceden de la misma población cabe esperar que <span class="math inline">\(S_1\)</span> y <span class="math inline">\(S_2\)</span> sean iguales o parecidos y que solo muestren pequeñas variaciones debidas al azar. Por tanto, el estadístico U sería cualquiera de los dos sumandos. Por ejemplo, U = <span class="math inline">\(S_1\)</span>.</p>
-<p>Una vez determinado el estadístico, el paso siguiente es determinar su distribución de probabilidad. Esta distribución no es muy complicada en el caso de que tengamos pocos valores y podremos calcular el valor de probabilidad exacto. Cuando el número de valores es relativamente grande será necesario realizar la siguiente aproximación:</p>
+<p>Una vez definido el estadístico, el paso siguiente es determinar su distribución de probabilidad. Esta distribución no es muy complicada en el caso de que tengamos pocos valores y podremos calcular el valor de probabilidad exacto. Cuando el número de valores es relativamente grande será necesario realizar la siguiente aproximación:</p>
 <p><span class="math display">\[
 Z = \frac{U - \mu_U}{\sigma_U} \qquad donde \qquad \mu_U = \frac{n_1(N+1)}{2} \qquad y \qquad  \sigma_U = \sqrt{n_1n_2(N+1)/12}
 \]</span>
 <em>Ejemplo</em></p>
 <p>En el ejemplo que se estudió cuando se introdujo la técnicas KW encontramos que había diferencias significativas por lo que será necesario determinar las diferencias entre los distintos métodos de enseñanza. Necesitamos determinar que métodos son los que muestran diferencias significativas:</p>
 <p><em>Prueba de U de Mann-whitney para métodos A y B:</em></p>
-<pre><code>## Warning in wilcox.test.default(b[1:5], b[6:10], paired = F): cannot compute
-## exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Wilcoxon rank sum test with continuity correction
 ## 
@@ -324,8 +567,6 @@ Z = \frac{U - \mu_U}{\sigma_U} \qquad donde \qquad \mu_U = \frac{n_1(N+1)}{2} \q
 ##      lower      upper 
 ## -0.2847567  0.9604032</code></pre>
 <p><em>Prueba de U de Mann-whitney para métodos A y C:</em></p>
-<pre><code>## Warning in wilcox.test.default(b[1:5], b[11:15], paired = F): cannot compute
-## exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Wilcoxon rank sum test with continuity correction
 ## 
@@ -341,8 +582,6 @@ Z = \frac{U - \mu_U}{\sigma_U} \qquad donde \qquad \mu_U = \frac{n_1(N+1)}{2} \q
 ##     lower     upper 
 ## 0.5171092 0.9891504</code></pre>
 <p><em>Prueba de U de Mann-whitney para métodos B y C:</em></p>
-<pre><code>## Warning in wilcox.test.default(b[6:10], b[11:15], paired = F): cannot compute
-## exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Wilcoxon rank sum test with continuity correction
 ## 
@@ -358,7 +597,7 @@ Z = \frac{U - \mu_U}{\sigma_U} \qquad donde \qquad \mu_U = \frac{n_1(N+1)}{2} \q
 ##      lower      upper 
 ## -0.4370519  0.9522030</code></pre>
 <p>Si consideramos un criterio de significación <span class="math inline">\(\alpha\)</span> = 0,05 tenemos que corregir el azar debido a que hemos realizado más de un test. Aplicando el criterio de Bonferroni (<span class="math inline">\(\alpha_C\)</span> = 0,05/3 = 0.0167) concluimos que no hay ninguna diferencia significativa. La misma conclusión obtendríamos si aplicáramos la corrección de Sidak (<span class="math inline">\(\alpha_C\)</span> = 0,017).</p>
-<p>El problema de utilizar la prueba de U de Mann-Whitney para realizar las comparaciones a posteriori es que no se mantienen los rangos del conjunto de observaciones, produciéndose un reajuste de los rangos en cada una de las comparaciones dos a dos. Existen varias alternativas a este procedimiento como la prueba de Dunn, la de Conover, el test de Nemenyi o la prueba de Dwass-Steel-Critchlow-Fligner (DSCF). En el programa de JAMOVI las comparaciones a posteriori se realizan mediante la prueba de (DSCF). Se considera que un contraste es significativo si satisface:</p>
+<p>El problema de utilizar la prueba de U de Mann-Whitney para realizar las comparaciones a posteriori es que no se mantienen los rangos del conjunto de observaciones, produciéndose un reajuste de los rangos en cada una de las comparaciones dos a dos. Existen varias alternativas a este procedimiento como la prueba de Dunn, la de Conover, el test de Nemenyi o la prueba de Dwass-Steel-Critchlow-Fligner (DSCF). En el programa de JAMOVI las comparaciones a posteriori se realizan mediante la prueba de DSCF. Se considera que un contraste es significativo si satisface:</p>
 <p><span class="math display">\[
 W_j = -\frac{n_i(ni+n_j+1)}{2}/\frac{n_in_j}{24}\times \Lambda &gt; q_{\alpha,k}, \quad \text{para} \quad 1\leq i\leq j\leq k
 \]</span></p>
@@ -374,8 +613,8 @@ W_j = -\frac{n_i(ni+n_j+1)}{2}/\frac{n_in_j}{24}\times \Lambda &gt; q_{\alpha,k}
 </div>
 <div class="footnotes">
 <hr />
-<ol start="3">
-<li id="fn3"><p>JAMOVI utiliza la prueba de Dwass-Steel-Critchlow-Fligner<a href="prueba-de-kuskal-wallis-kw.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>JAMOVI utiliza la prueba de Dwass-Steel-Critchlow-Fligner<a href="prueba-de-kuskal-wallis-kw.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

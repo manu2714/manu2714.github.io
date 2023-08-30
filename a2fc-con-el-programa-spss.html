@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -98,7 +162,7 @@ div.csl-indent {
 <li><a href="./">Análisis de Datos II</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
 <li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
@@ -216,6 +280,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -241,21 +306,21 @@ div.csl-indent {
 <ul>
 <li>El análisis de los modelos factoriales con el programa SPSS se hace a partir de la opción de los modelos lineales generalizados (<em>Analizar + Modelo lineal general + Univariante</em>).</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-121"></span>
 <img src="figurasR/anova1FML.png" alt="Modelo lineal generalizado en SPSS" width="70%" />
 <p class="caption">
 Figura 4.16: Modelo lineal generalizado en SPSS
 </p>
 </div>
 <p>Cuando se utiliza este procedimiento aparece una ventana en la que se introduce la VD y las VVII. El procedimiento es semejante al estudiado en el tema 2. La diferencia es que aquí introducimos dos o más variables en el cuadro de <em>factores fijos</em>. Asimismo, aparecen una serie de botones que permiten realizar las mismas comparaciones a posteriori que las realizadas en el tema 2. El botón de <em>gráficos</em> permite representar las medias de las distintas condiciones. Con el botón de <em>guardar</em> podemos almacenar las puntuaciones predichas, los errores, valores para el diagnóstico de los supuestos de la prueba. Por último, en el botón de <em>opciones</em> pueden obtenerse resúmenes estadísticos de las variables, pruebas de homogeneidad, estimaciones del tamaño del efecto y de la potencia entre otras posibilidades.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-122"></span>
 <img src="figurasR/anova1FMlopciones.png" alt="Ventana para introducir las variables" width="70%" />
 <p class="caption">
 Figura 4.17: Ventana para introducir las variables
 </p>
 </div>
 <p>Los resultados obtenidos permiten contrastar la hipótesis del diseño (en este caso corresponden a los del ejemplo 1):</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-123"></span>
 <img src="figurasR/anova2f.png" alt="Resultados del ANOVA factorial" width="70%" />
 <p class="caption">
 Figura 4.18: Resultados del ANOVA factorial
@@ -264,7 +329,7 @@ Figura 4.18: Resultados del ANOVA factorial
 <ul>
 <li>En el caso de que la interacción sea significativa es conveniente crear una nueva variable (denominada <em>ab</em> en la siguiente figura), para estudiar el efecto de la interacción:</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-124"></span>
 <img src="figurasR/anova2fInter.png" alt="Creación de la variable ab" width="70%" />
 <p class="caption">
 Figura 4.19: Creación de la variable ab
@@ -273,7 +338,7 @@ Figura 4.19: Creación de la variable ab
 <ul>
 <li>Una vez creada la variable utilizamos el procedimiento de comparar medias estudiado en el tema 2 (<em>Analizar + Comparar medias + ANOVA de 1 factor</em>:</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-125"></span>
 <img src="figurasR/anova1Fspss.jpg" alt="Ventana para seleccionar la opción de modelo lineal" width="70%" />
 <p class="caption">
 Figura 4.20: Ventana para seleccionar la opción de modelo lineal
@@ -282,7 +347,7 @@ Figura 4.20: Ventana para seleccionar la opción de modelo lineal
 <ul>
 <li>El paso siguente consiste en introducir la variable dependiente de nuestro diseño (vd en el ejemplo 4.1) en el cuadro denominado <em>Lista de dependientes</em> y la variable <em>ab</em>. En esta ventana pulsaremos el btón de <em>Contrastes</em> para introducir las comparaciones de los efectos simples.</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-126"></span>
 <img src="figurasR/anova2fInter2.png" alt="Introducción de las variables" width="70%" />
 <p class="caption">
 Figura 4.21: Introducción de las variables
@@ -321,7 +386,7 @@ Figura 4.21: Introducción de las variables
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-127"></span>
 <img src="figurasR/anova2fInter3.png" alt="Coeficientes para el primer contraste" width="70%" />
 <p class="caption">
 Figura 4.22: Coeficientes para el primer contraste
@@ -330,7 +395,7 @@ Figura 4.22: Coeficientes para el primer contraste
 <ul>
 <li>Los resultados para este contraste aparecen en la siguiente figura:</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-128"></span>
 <img src="figurasR/anova2fInter4.png" alt="Coeficientes y resultados para el primer contraste" width="70%" />
 <p class="caption">
 Figura 4.23: Coeficientes y resultados para el primer contraste

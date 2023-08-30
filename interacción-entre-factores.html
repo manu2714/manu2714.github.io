@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -98,7 +162,7 @@ div.csl-indent {
 <li><a href="./">Análisis de Datos II</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
 <li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
@@ -216,6 +280,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -242,7 +307,7 @@ div.csl-indent {
 <p><span class="math display">\[
 \alpha\beta_{jk}= \mu_{jk} - (\mu_{++} + \alpha_{j} + \beta_k)
 \]</span></p>
-<p>Existe interacción cuando <span class="math inline">\(\alpha\beta_{jk} \neq\)</span> 0 para algún <em>j</em> ó <em>k</em>. <span class="citation">Pardo &amp; SanMartin (<a href="análisis-de-regresión-mediante-el-programa-spss.html#ref-pardo">2010</a>)</span> consideran que esta expresión puede interpretarse de dos formas:</p>
+<p>Existe interacción cuando <span class="math inline">\(\alpha\beta_{jk} \neq\)</span> 0 para algún <em>j</em> ó <em>k</em>. <span class="citation">A. Pardo &amp; SanMartin (<a href="referencias.html#ref-pardo">2010</a>)</span> consideran que esta expresión puede interpretarse de dos formas:</p>
 <ol style="list-style-type: decimal">
 <li><p>Como <em>desviación que experimentan las medias de las casillas con respecto a los efectos principales de los factores</em>:</p>
 <ul>
@@ -256,14 +321,14 @@ div.csl-indent {
 </ul></li>
 </ol>
 <p>Estas dos conceptualizaciones del efecto interactivo al final se traducen en el concepto anteriormente mencionado de la existencia de interacción siempre y cuando las diferencias de un factor (p. ejemplo, el factor A), son distintas dependiendo del valor que está presente del otro factor B. En la siguiente figura se presentan dos situaciones donde en la primera de ellas no existe interacción entre las variables y en la otra si.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-106"></span>
 <img src="figurasR/modfact2.png" alt="Medias de dos diseños factoriales con y sin interacción" width="450px" />
 <p class="caption">
 Figura 4.2: Medias de dos diseños factoriales con y sin interacción
 </p>
 </div>
 <p>Gráficamente es muy fácil apreciar la existencia (o no) de interacción: cuando las líneas son paralelas no existe interacción. Por el contrario, si las líneas se cruzan o no son paralelas hablamos de interacción. En la figura 3 izquierda se observa con claridad que cualquier valor del factor B cambia en 2 unidades siempre, dependiendo de que esté presente el valor de <span class="math inline">\(a_1\)</span> o <span class="math inline">\(a_2\)</span>. En cambio, en la figura de la derecha los cambios no son uniformes. Son mucho más elevados cuando el valor de B es <span class="math inline">\(b_2\)</span> que cuando el valor de B es <span class="math inline">\(b_1\)</span> ó <span class="math inline">\(b_3\)</span>. Es más, se observa que el cambio significativo en el factor A es sólo cuando está presente <span class="math inline">\(b_2\)</span>. Cuando están presentes los otros valores de B los cambios son muy parecidos.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-107"></span>
 <img src="figurasR/fact_simu.png" alt="Representación gráfica de dos diseños factoriales sin y con interacción" width="450px" />
 <p class="caption">
 Figura 4.3: Representación gráfica de dos diseños factoriales sin y con interacción
@@ -272,7 +337,7 @@ Figura 4.3: Representación gráfica de dos diseños factoriales sin y con inter
 <div id="ejemplo-1-de-diseño-factorial" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Ejemplo 1 de diseño factorial<a href="interacción-entre-factores.html#ejemplo-1-de-diseño-factorial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Supongamos que estamos interesados en estudiar si el efecto de la dieta (<span class="math inline">\(a_1\)</span> = Dieta A, <span class="math inline">\(a_2\)</span> = Dieta B) sobre la actividad motora depende de las horas de sueño <span class="math inline">\(b_1\)</span> = 2 horas, <span class="math inline">\(b_2\)</span> = 4 horas y <span class="math inline">\(b_3\)</span> = 6 horas). Los resultados de los sujetos aparecen a continuación:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-108"></span>
 <img src="figurasR/ejemplo31.png" alt="Representación gráfica del ejemplo 3.1" width="70%" />
 <p class="caption">
 Figura 4.4: Representación gráfica del ejemplo 3.1
@@ -280,14 +345,14 @@ Figura 4.4: Representación gráfica del ejemplo 3.1
 </div>
 <div style="page-break-after: always;"></div>
 <p>Analizando estos datos nos encontramos que existe un efecto interactivo entre la variable tipo de dieta y horas de sueño (ver Cuadro 2). Asimismo, podemos comprobar mediante el estadístico de Levene que se cumple el supuesto de homogeneidad (ver tabla 4.5).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-110"></span>
 <img src="figurasR/anovaLevene.png" alt="Resultados ANOVA y prueba de Levene" width="450px" />
 <p class="caption">
 Figura 4.5: Resultados ANOVA y prueba de Levene
 </p>
 </div>
 <p>En la siguiente figura observamos que el efecto de la dieta sobre la actividad motora es prácticamente inexistente cuando los animales durmieron 2 o 6 horas. Sin embargo, se produce una gran diferencia en la actividad motora con la dieta A cuando los animales durmieron 4 horas (condición <span class="math inline">\(a_1b_2\)</span>).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-111"></span>
 <img src="figurasR/fact_ejemplo31_jamovi.png" alt="Representación gráfica del ejemplo 3.1" width="70%" />
 <p class="caption">
 Figura 4.6: Representación gráfica del ejemplo 3.1
@@ -296,7 +361,7 @@ Figura 4.6: Representación gráfica del ejemplo 3.1
 <div id="cálculo-de-los-efectos-simples" class="section level4 hasAnchor" number="4.2.1.1">
 <h4><span class="header-section-number">4.2.1.1</span> Cálculo de los efectos simples<a href="interacción-entre-factores.html#cálculo-de-los-efectos-simples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Una vez que se constata la existencia de interacción en el diseño, el paso siguiente consiste en interpretar la interacción mediante la comparación de los efectos simples. Un efecto simple calcula la diferencia de dos valores de la VD en presencia de dos valores distintos de la VI, manteniendo constante el valor de una tercera. Consideremos los valores medios de nuestro ejemplo 1:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-112"></span>
 <img src="figurasR/MediasEjemplo3-1.png" alt="Medias del ejemplo 3.1" width="400px" />
 <p class="caption">
 Figura 4.7: Medias del ejemplo 3.1
@@ -400,7 +465,7 @@ t = \frac{\phi_3}{Var_{error}} = \frac{4.4}{1.91} = 2.30
 <div id="ejemplo-2-de-diseño-factorial" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Ejemplo 2 de diseño factorial<a href="interacción-entre-factores.html#ejemplo-2-de-diseño-factorial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Supongamos que estamos interesados en estudiar si la memoria de trabajo de escolares se veía afectada por las variables edad y cantidad de zonas verdes próximas al centro educativo. Los resultados de los primeros niños estudiados se muestran a continuación: Para realizar el análisis de los datos debemos asegurarnos de que se cumplen los supuestos de la prueba (normalidad y homogeneidad de las varianzas).En la siguiente figura se representan los datos por condición del estudio.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-113"></span>
 <img src="figurasR/boxplot_ejemplo2.png" alt="Boxplot del ejemplo 2" width="300px" />
 <p class="caption">
 Figura 4.8: Boxplot del ejemplo 2
@@ -408,13 +473,13 @@ Figura 4.8: Boxplot del ejemplo 2
 </div>
 <p>Realizando el análisis de la varianza observamos que la interacción no resulta significativa, siendo la edad el único factor significativo. Por tanto, en este diseño lo único que hay que hacer es determinar si existen diferencias significativas entre las distintas edades. Para ello hay que realizar algún procedimiento <em>post hoc</em> como el de Tukey.</p>
 <div style="page-break-after: always;"></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-114"></span>
 <img src="figurasR/anova_ejemplo2.png" alt="Resultados del ejemplo 2" width="450px" />
 <p class="caption">
 Figura 4.9: Resultados del ejemplo 2
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-115"></span>
 <img src="figurasR/tuckey_ejemplo2.png" alt="Prueba de Tuckey para las comparaciones de edad del ejemplo 2" width="400px" />
 <p class="caption">
 Figura 4.10: Prueba de Tuckey para las comparaciones de edad del ejemplo 2

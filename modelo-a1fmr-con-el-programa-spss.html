@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -98,7 +162,7 @@ div.csl-indent {
 <li><a href="./">Análisis de Datos II</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
 <li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
@@ -216,6 +280,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -241,7 +306,7 @@ div.csl-indent {
 <ul>
 <li>Tenemos que seleccionar <em>Analizar + Modelo lineal general + Medidas repetidas</em> tal y como aparece en la figura siguiente:</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-94"></span>
 <img src="figurasR/anovamr6b.jpg" alt="Selección del modelo A1FMR en SPSS" width="70%" />
 <p class="caption">
 Figura 3.11: Selección del modelo A1FMR en SPSS
@@ -250,7 +315,7 @@ Figura 3.11: Selección del modelo A1FMR en SPSS
 <ul>
 <li>Le damos nombre al factor, introducimos el número de niveles y pulsamos el botón de añadir</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-95"></span>
 <img src="figurasR/anovamr7b.jpg" alt="Modelo A1FMR en SPSS: Identificación de los factores y niveles" width="70%" />
 <p class="caption">
 Figura 3.12: Modelo A1FMR en SPSS: Identificación de los factores y niveles
@@ -260,7 +325,7 @@ Figura 3.12: Modelo A1FMR en SPSS: Identificación de los factores y niveles
 <ul>
 <li>Incluimos los tres niveles y marcamos el botón de <em>Opciones</em>. Este botón da lugar a otra ventana en la que podremos obtener descriptivos de cada variable, y pruebas para el diagnóstico del modelo. Marcando el botón de <em>Gráficos</em> podemos obtener el gráfico de las medias</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-96"></span>
 <img src="figurasR/anovamr8b.jpg" alt="Modelo A1FMR en SPSS: Definición de los niveles" width="70%" />
 <p class="caption">
 Figura 3.13: Modelo A1FMR en SPSS: Definición de los niveles
@@ -269,7 +334,7 @@ Figura 3.13: Modelo A1FMR en SPSS: Definición de los niveles
 <ul>
 <li>El estudio descriptivo nos muestra los promedios de cada condición, su desviación estándar y el número de casos válidos</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-97"></span>
 <img src="figurasR/desb.jpg" alt="Modelo A1FMR en SPSS: Descriptivos" width="70%" />
 <p class="caption">
 Figura 3.14: Modelo A1FMR en SPSS: Descriptivos
@@ -278,7 +343,7 @@ Figura 3.14: Modelo A1FMR en SPSS: Descriptivos
 <ul>
 <li>Introducimos el factor en el cuadro de <em>Mostrar medias</em> y elegimos la corrección de Bonferroni.</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-26"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-98"></span>
 <img src="figurasR/anovamr9b.jpg" alt="Modelo A1FMR en SPSS: Corrección de Bonferroni" width="70%" />
 <p class="caption">
 Figura 3.15: Modelo A1FMR en SPSS: Corrección de Bonferroni
@@ -287,7 +352,7 @@ Figura 3.15: Modelo A1FMR en SPSS: Corrección de Bonferroni
 <ul>
 <li>Observamos que el estadístico de Mauchly nos indica que se cumplen los supuestos de esfericidad. En la tabla, además del estadístico W de Mauchly (<em>W</em> = 0.667), aparecen la aproximación <em>Chi-cuadrado</em>, sus grados de libertad (<em>gl</em> = 2) y la significación (<em>p</em> = 0.667). También aparecen las estimaciones de <span class="math inline">\(\epsilon\)</span> de Geisser-Greenhouse (<span class="math inline">\(\hat{\epsilon}\)</span> = 0.75, el de Huyndt-Feldt <span class="math inline">\(\tilde{\epsilon}\)</span> = 1 y la estimación del limite inferior = 0.5).</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-99"></span>
 <img src="figurasR/mauchlyb.jpg" alt="Modelo A1FMR en SPSS: Prueba de Mauchly" width="70%" />
 <p class="caption">
 Figura 3.16: Modelo A1FMR en SPSS: Prueba de Mauchly
@@ -296,7 +361,7 @@ Figura 3.16: Modelo A1FMR en SPSS: Prueba de Mauchly
 <ul>
 <li>Dado que se cumplen los supuestos de esfericidad, consideramos válida la prueba F</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-28"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-100"></span>
 <img src="figurasR/resb.jpg" alt="Modelo A1FMR en SPSS: Prueba F" width="70%" />
 <p class="caption">
 Figura 3.17: Modelo A1FMR en SPSS: Prueba F
@@ -305,7 +370,7 @@ Figura 3.17: Modelo A1FMR en SPSS: Prueba F
 <ul>
 <li>Observamos que existen diferencias significativas entre las imágenes que representaban emociones de alegría con las que representaban emociones neutras</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-101"></span>
 <img src="figurasR/compb.jpg" alt="Modelo A1FMR en SPSS: Post hoc" width="70%" />
 <p class="caption">
 Figura 3.18: Modelo A1FMR en SPSS: Post hoc

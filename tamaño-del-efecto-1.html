@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -98,7 +162,7 @@ div.csl-indent {
 <li><a href="./">Análisis de Datos II</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
 <li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
@@ -216,6 +280,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -238,7 +303,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="tamaño-del-efecto-1" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Tamaño del efecto<a href="tamaño-del-efecto-1.html#tamaño-del-efecto-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>El tamaño del efecto pretende determinar la importancia del efecto encontrado, ya que es bastante posible encontrar diferencias significativas, que son insustanciales, cuando los tamaños muestrales son muy grandes. Es decir, encontrar diferencias significativas no siempre implica que existan diferencias entre las medias a nivel poblacional. Aunque existen distintas medidas del tamaño del efecto, aquí vamos a considerar la medida de eta parcial corregida al cuadrado y omega cuadrado que es la medida preferida por distintos investigadores <span class="citation">(<a href="análisis-de-regresión-mediante-el-programa-spss.html#ref-pardo">Pardo &amp; SanMartin, 2010</a>)</span>.</p>
+<p>El tamaño del efecto pretende determinar la importancia del efecto encontrado, ya que es bastante posible encontrar diferencias significativas, que son insustanciales, cuando los tamaños muestrales son muy grandes. Es decir, encontrar diferencias significativas no siempre implica que existan diferencias entre las medias a nivel poblacional. Aunque existen distintas medidas del tamaño del efecto, aquí vamos a considerar la medida de eta parcial corregida al cuadrado y omega cuadrado que es la medida preferida por distintos investigadores <span class="citation">(<a href="referencias.html#ref-pardo">A. Pardo &amp; SanMartin, 2010</a>)</span>.</p>
 <p>El estadístico eta cuadrado parcial corregida se define como:</p>
 <p><span class="math display">\[
 \hat{\eta}^2_{pcorregida} = 1 - [(1 - \hat{\eta}^{2}(N - 1)/(N - J))]
@@ -253,8 +318,8 @@ div.csl-indent {
 <p><span class="math display">\[
 \hat{\omega}^{2} = \frac{(J - 1)(MCA-MCE)}{(J - 1)MCA + (N - J+ 1)MCE}
 \]</span></p>
-<p>Los valores 0.01, 0.06 y 0.14 representan tamaños de efecto bajo, medio y grande respectivamente para ambas medidas. Si el valor de <span class="math inline">\(\omega^{2}\)</span> es menor de 0 consideramos, por convención que su valor es cero.</p>
-<p>Aplicado a los datos del ejemplo 1 tenemos:</p>
+<p>Los valores 0.01, 0.06 y 0.14 representan tamaños de efecto bajo, medio y grande respectivamente para ambas medidas. Si el valor de <span class="math inline">\(\omega^{2}\)</span> es menor de 0 consideramos, por convención, que su valor es cero.</p>
+<p>Aplicado a los datos del ejemplo 2.1 tenemos:</p>
 <p><span class="math display">\[
 \hat{\eta}^{2} =  \frac{(J - 1)MCA}{(J - 1) MCA + (N - J)MCE} =
 \frac{(3 - 1)281.27}{(3 - 1) 281.27 + (15 - 3)43.77} = 0.517
@@ -263,7 +328,7 @@ div.csl-indent {
 \hat{\omega}^{2} = \frac{(J - 1)(MCA-MCE)}{(J - 1)MCA + (N - J+ 1)MCE} = \frac{(3 - 1)(281.27-43.77)}{(3 - 1)281.27 + (15 - 3+ 1)43.77} = 0.458
 \]</span></p>
 <p>Observamos que el valor de <span class="math inline">\(\hat{\eta}^{2}\)</span> es mayor que el de <span class="math inline">\(\hat{\omega}^{2}\)</span>, ya que presenta estimaciones sesgadas del tamaño del efecto. No obstante, considerando el valor de <span class="math inline">\(\hat{\omega}^{2}\)</span> podemos considerar que los tamaños de efecto en este estudio son grandes aplicando el criterio propuesto por Cohen (<strong>0.01, 0.06 y 0.14</strong>).</p>
-<p>Cuando no se cumplen los supuestos del ANOVA, <span class="citation">Ato &amp; Vallejo (<a href="análisis-de-regresión-mediante-el-programa-spss.html#ref-ato2">2015</a>)</span> proponen utilizar una medida directa de comparación de medias definida como <span class="math inline">\(r = z\sqrt{N}\)</span> donde <em>z</em> es la aproximación normal del estadístico U del contraste Mann-Whitney o del contraste de Kruskall-Wallis. Los criterios de clasificación son <strong>0.1</strong> (bajo), <strong>0.3</strong> (medio) y <strong>0.5</strong> (alto). También recomiendan el estadístico <strong><em>Delta</em></strong> de Cliff.</p>
+<p>Cuando no se cumplen los supuestos del ANOVA, <span class="citation">Ato &amp; Vallejo (<a href="referencias.html#ref-ato2">2015</a>)</span> proponen utilizar una medida directa de comparación de medias definida como <span class="math inline">\(r = z\sqrt{N}\)</span> donde <em>z</em> es la aproximación normal del estadístico U del contraste Mann-Whitney o del contraste de Kruskall-Wallis. Los criterios de clasificación son <strong>0.1</strong> (bajo), <strong>0.3</strong> (medio) y <strong>0.5</strong> (alto). También recomiendan el estadístico <strong><em>Delta</em></strong> de Cliff.</p>
 </div>
             </section>
 

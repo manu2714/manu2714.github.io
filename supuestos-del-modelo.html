@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -162,7 +162,7 @@ div.csl-indent {
 <li><a href="./">Análisis de Datos II</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
 <li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
@@ -318,7 +318,7 @@ Figura 6.4: Relación entre los años de escolarización y el tiempo en realizar
 <div id="normalidad" class="section level4 hasAnchor" number="6.4.0.2">
 <h4><span class="header-section-number">6.4.0.2</span> Normalidad<a href="supuestos-del-modelo.html#normalidad" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Este supuesto implica que los errores del modelo siguen una distribución normal. Para evaluar este modelo basta con calcular la diferencia entre las puntuaciones observadas y las predichas (residuales) y aplicar el estadístico de Shapiro-Wilks (SW) para determinar su significación. Aplicado al ejemplo de la figura 1 tenemos:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="supuestos-del-modelo.html#cb13-1" tabindex="-1"></a><span class="fu">shapiro.test</span>(mod<span class="sc">$</span>residuals)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="supuestos-del-modelo.html#cb63-1" tabindex="-1"></a><span class="fu">shapiro.test</span>(mod<span class="sc">$</span>residuals)</span></code></pre></div>
 <pre><code>## 
 ##  Shapiro-Wilk normality test
 ## 
@@ -359,7 +359,7 @@ Figura 6.6: Residuales del modelo
 </div>
 <p>Observamos que todos los residuales se encuentran dentro del rango (-1,2), indicando un buen ajuste del modelo.</p>
 <p>Al igual que existen puntuaciones anómalas con respecto a la variable Y, también pueden aparecer puntuaciones atípicas en relación con los valores de los predictores (). Para medir la influencia de este tipo de puntuaciones se calculan los índices <span class="math inline">\(h_{i}\)</span> que representan el grado de alejamiento del conjunto de puntuaciones
-de un caso con respecto a las puntuaciones medias de todos los casos. <span class="citation">Pardo &amp; San Martin (<a href="referencias.html#ref-sanmartin">2011</a>)</span> señalan que una regla que funciona bien es revisar aquellos valores <span class="math inline">\(h_{i}\)</span> por encima de 0.5.</p>
+de un caso con respecto a las puntuaciones medias de todos los casos. <span class="citation">A. Pardo &amp; San Martin (<a href="referencias.html#ref-sanmartin">2011</a>)</span> señalan que una regla que funciona bien es revisar aquellos valores <span class="math inline">\(h_{i}\)</span> por encima de 0.5.</p>
 <p>Una medida basada en los <span class="math inline">\(h_{i}\)</span> es el estadístico distancias de Cook (<span class="math inline">\(D_{i}\)</span>) que es la suma de los cambios que se producen en los coeficientes de regresión al ir eliminando cada caso del análisis:</p>
 <p><span class="math display">\[
 D_{i}=[h_{i}E_{S_{i}^{2}}]/[(p+1)(1-h_{i})]
@@ -367,7 +367,7 @@ D_{i}=[h_{i}E_{S_{i}^{2}}]/[(p+1)(1-h_{i})]
 <p>donde <span class="math inline">\(h_{i}\)</span> es el grado en el que una puntuación es atípica en <span class="math inline">\(X_{j}\)</span> y <span class="math inline">\(E_{S_{i}}\)</span> es el grado en que una puntuación es atípica con respecto a Y.</p>
 <p>Se considera que un caso debe ser considerado influyente cuando <span class="math inline">\(D_{i} &gt; 1\)</span>. En la siguiente gráfica observamos que las puntuaciones <span class="math inline">\(D_{i}\)</span> del modelo que relaciona la edad con la medida 1 del Boston se encuentran por debajo
 de 1:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-171"></span>
 <img src="figurasR/leverage.png" alt="Leverage del modelo" width="60%" />
 <p class="caption">
 Figura 6.7: Leverage del modelo
@@ -382,8 +382,8 @@ vamos a utilizar el ejemplo desarrollado anteriormente en el que se quiso relaci
 Atención_{i} = \beta_{0} + \beta_{1}*edad + \beta_{2}*educación +  \epsilon_{i}
 \]</span></p>
 <p>Los resultados que proporciona el programa R son los siguientes:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="supuestos-del-modelo.html#cb15-1" tabindex="-1"></a>mod4<span class="ot">&lt;-</span> <span class="fu">lm</span>(atencion<span class="sc">~</span>AEC<span class="sc">+</span>edu,<span class="at">data=</span>dat)</span>
-<span id="cb15-2"><a href="supuestos-del-modelo.html#cb15-2" tabindex="-1"></a><span class="fu">summary</span>(mod4)</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="supuestos-del-modelo.html#cb65-1" tabindex="-1"></a>mod4<span class="ot">&lt;-</span> <span class="fu">lm</span>(atencion<span class="sc">~</span>AEC<span class="sc">+</span>edu,<span class="at">data=</span>dat)</span>
+<span id="cb65-2"><a href="supuestos-del-modelo.html#cb65-2" tabindex="-1"></a><span class="fu">summary</span>(mod4)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = atencion ~ AEC + edu, data = dat)
