@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-08-30" />
+<meta name="date" content="2023-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -303,7 +303,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="comprobación-de-los-supuestos" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Comprobación de los supuestos<a href="comprobación-de-los-supuestos.html#comprobación-de-los-supuestos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Es necesario determinar si las muestras son independientes. Esto se asume siempre y cuando hayan sido extraídas al azar <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Asimismo, se necesita determinar si las muestras proceden de una población normal con la misma varianza. Asimismo, tendremos que comprobar que la distribución de los errores sigue una ley normal.</p>
+<p>Es necesario determinar si las muestras son independientes. Esto se asume siempre y cuando hayan sido extraídas al azar <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Asimismo, se necesita determinar si las muestras proceden de una población normal con la misma varianza. También tendremos que comprobar que la distribución de los errores sigue una ley normal.</p>
 <p><strong>Prueba de normalidad</strong> para cada uno de los grupos:</p>
 <p><em>Grupo 1:</em></p>
 <pre><code>## 
@@ -323,7 +323,33 @@ div.csl-indent {
 ## 
 ## data:  aciertos[11:15]
 ## W = 0.95695, p-value = 0.7866</code></pre>
+<div style="page-break-after: always;"></div>
 <p><strong>Prueba de homogeneidad de varianzas:</strong></p>
+<table>
+<caption><span id="tab:unnamed-chunk-42">Tabla 2.3: </span>Prueba de Levene del ejemplo 2.1</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Df</th>
+<th align="right">F value</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">group</td>
+<td align="right">2</td>
+<td align="right">0.4599212</td>
+<td align="right">0.6420136</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">12</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="footnotes">
 <hr />

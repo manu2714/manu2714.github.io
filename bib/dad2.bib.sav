@@ -17,7 +17,7 @@
 }
 
 @Book{pardo,
-  author    = {Pardo, A. and SanMartin, R.},
+  author    = {Pardo, A and San Martin, R},
   publisher = {Síntesis},
   title     = {Análisis de datos en ciencias sociales y de la salud {II}},
   year      = {2010},
@@ -331,7 +331,7 @@
 }
 
 @Book{sanmartin,
-  author    = {Pardo, A and San Martin, R},
+  author    = {Pardo, A and Sanmartin, R},
   publisher = {Síntesis},
   title     = {Análisis de datos en las ciencias sociales y de la salud {II}},
   year      = {2011},

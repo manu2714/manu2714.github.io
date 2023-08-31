@@ -25,7 +25,10 @@ fig:unnamed-chunk-34
 fig:unnamed-chunk-35
 fig:unnamed-chunk-36
 fig:unnamed-chunk-37
+tab:Ej1
 fig:unnamed-chunk-38
+tab:anova1F
+tab:unnamed-chunk-42
 fig:unnamed-chunk-45
 fig:unnamed-chunk-46
 tab:Ej2
