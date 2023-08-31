@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Análisis de datos en psicología II</title>
+  <meta name="description" content="Libro de DAD2" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Análisis de datos en psicología II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Libro de DAD2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Análisis de datos en psicología II" />
+  
+  <meta name="twitter:description" content="Libro de DAD2" />
+  
+
+<meta name="author" content="Manuel Morales Ortiz" />
+
+
+<meta name="date" content="2023-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Análisis de Datos II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path=""><a href="#prólogo"><i class="fa fa-check"></i>Prólogo</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de datos en psicología II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Análisis de datos en psicología II</h1>
+<p class="author"><em>Manuel Morales Ortiz</em></p>
+<p class="date"><em>2023-08-30</em></p>
+</div>
+<div id="prólogo" class="section level1 unnumbered hasAnchor">
+<h1>Prólogo<a href="#prólogo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este documento es el resultado de las notas de clase de la asignatura “Diseño y Análisis de datos II” existente en el plan de estudios de graduado en psicología en la Universidad de Sevilla. El enfoque de estos apuntes está dirigido a aquel usuario que no tiene un conocimiento profundo de matemáticas, pero que ha superado un primer curso de análisis de datos donde se hayan estudiado los contenidos relacionados con la estadística descriptiva y los fundamentos de la inferencia estadística.</p>
+<p>La enseñanza de las materias de análisis de datos suelen ir asociadas al uso de un determinado programa informático que facilite el cálculo de los resultados que de otra manera podrían resultar tediosos. La elección del programa informático debe tener en cuenta la audiencia a la que va dirigido. En el campo de la psicología está muy extendido el uso del programa IBM SPSS <span class="citation">(<a href="#ref-spss">IBM-Corp., 2023</a>)</span>, siendo el programa estadístico de referencia en una gran parte de las universidades. Sin embargo, la necesidad de disponer de licencia de pago implica que los futuros usuarios tendrán dificultades para disponer de dicho programa una vez que abandonen la universidad. Para solucionar este problema se suele recurrir a programas de libre distribución como el programa R <span class="citation">(<a href="#ref-R">R Core Team, 2016</a>)</span>. El inconveniente que presenta este programa es su curva de aprendizaje. Dado que el periodo de enseñanza es muy limitado en los planes de estudio, iniciarse en este programa supone una reducción del tiempo disponible para la enseñanza de los contenidos propios de la asignatura. Para solventar este problema hemos recurrido al programa JAMOVI <span class="citation">(<a href="#ref-jamovi">The Jamovi Team, 2022</a>)</span>. Este programa permite aprovechar la flexibilidad y posibilidades de R utilizando un sistema de ventanas más adecuado a las habilidades de los estudiantes de psicología.</p>
+<p>Este documento se compone de 6 capítulos. En el primero se realiza una introducción a la lógica de la investigación científica. También se realiza un recordatorio de los fundamentos de la inferencia estadística con aplicación de algunas técnicas estadísticas básicas. En los capítulos 2 a 5 se presenta la técnica de ANOVA para estudiar relaciones entre variables (relaciones entre 1 variable independiente y una dependiente en los temas 2 y 3 y relaciones con más de una VI en los temas 4 y 5).</p>
+<p>Este trabajo ha sido posible gracias a muchas personas. En primer lugar, a toda la comunidad R por los desarrollos del programa R y en particular a <span class="citation">Xie (<a href="#ref-Xie2023">2023</a>)</span> por el desarrollo de librerías como knitr o bookdown que nos han resultado muy útiles para la redacción de este trabajo. Asimismo, este trabajo se ha visto beneficiado del trabajo de <span class="citation">Luque Calvo (<a href="#ref-LuqueCalvo2017">2017</a>)</span>. Asimismo, a mis alumnos que han sido los mejores revisores del trabajo aquí expuesto.</p>
+<p>La elaboración de este trabajo se ha realizado bajo las condiciones de la licencia de Creative Commons
+<a href="https://creativecommons.org/share-your-work/public-domain/cc0" class="uri">https://creativecommons.org/share-your-work/public-domain/cc0</a>:</p>
+<p><img src="figurasR/cc-zero.png" width="30%" style="display: block; margin: auto;" /></p>
+<p>Agosto de 2023.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-spss" class="csl-entry">
+IBM-Corp. (2023). <em>IBM SPSS statistics for windows (version 29).</em> IBM Corp.
+</div>
+<div id="ref-LuqueCalvo2017" class="csl-entry">
+Luque Calvo, P. L. (2017). <em>Escribir un trabajo fin de estudios con r markdown</em>. <a href="http://destio.us.es/calvo">http://destio.us.es/calvo</a>
+</div>
+<div id="ref-R" class="csl-entry">
+R Core Team. (2016). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
+</div>
+<div id="ref-jamovi" class="csl-entry">
+The Jamovi Team. (2022). <em>Jamovi (versión 2.3) [computer software].</em> ([Computer Software]). <a href="Retrieved from https://www.jamovi.org">Retrieved from https://www.jamovi.org</a>
+</div>
+<div id="ref-Xie2023" class="csl-entry">
+Xie, Y. (2023). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

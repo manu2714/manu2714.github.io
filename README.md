@@ -1,1 +1,1 @@
-# manu2714.github.io
+Este trabajo es una primera versión del manual de Análisis de datos II 

@@ -1,0 +1,40 @@
+--- 
+title: "Análisis de datos en psicología II"
+author: "Manuel Morales Ortiz"
+date: "`r Sys.Date()`"
+output: bookdown::pdflibrar_document
+documentclass: book
+bibliography:
+- bib/packages.bib
+- bib/dad2.bib
+biblio-style: apalike
+csl: apa.csl
+description: |
+  Libro de DAD2
+link-citations: yes
+github-repo: "rstudio/bookdown-demo"
+site: bookdown::bookdown_site
+---
+
+
+
+# Prólogo {-}
+
+Este documento es el resultado de las notas de clase de la  asignatura "Diseño y Análisis de datos II" existente en el plan de estudios de graduado en psicología en la Universidad  de Sevilla. El enfoque de estos apuntes está dirigido a aquel usuario que no tiene un conocimiento profundo de matemáticas, pero que ha superado un primer curso de análisis de datos donde se hayan estudiado los contenidos relacionados con la estadística descriptiva y los fundamentos de la inferencia estadística.
+
+La enseñanza de las materias de análisis de datos suelen ir asociadas al uso de un determinado programa informático que facilite el cálculo de los resultados que de otra manera podrían resultar tediosos. La elección del programa informático debe tener en cuenta la audiencia a la que va dirigido. En el campo de la psicología está muy extendido el uso del programa IBM SPSS [@spss], siendo el programa estadístico de referencia en una gran parte de las universidades. Sin embargo, la necesidad de disponer de licencia de pago implica que los futuros usuarios tendrán dificultades para disponer de dicho programa una vez que abandonen la universidad. Para solucionar este problema se suele recurrir a programas de libre distribución como el programa R [@R]. El inconveniente que presenta este programa es su curva de aprendizaje. Dado que el periodo de enseñanza es muy limitado en los planes de estudio, iniciarse en este programa supone una reducción del tiempo disponible para la enseñanza de los contenidos propios de la asignatura. Para solventar este problema hemos recurrido al programa JAMOVI [@jamovi]. Este programa permite aprovechar la flexibilidad y posibilidades de R utilizando un sistema de ventanas más adecuado a las habilidades de los estudiantes de psicología.   
+
+Este documento se compone de 6 capítulos. En el primero  se realiza una introducción a la lógica de la investigación científica. También se realiza un recordatorio de los fundamentos de la inferencia estadística con aplicación de algunas técnicas estadísticas básicas. En los capítulos 2 a 5  se presenta la técnica de ANOVA para estudiar relaciones entre variables (relaciones entre 1 variable independiente y una dependiente en los temas 2 y 3 y relaciones con más de una VI en los temas 4 y 5).
+
+Este trabajo ha sido posible gracias a muchas personas. En primer lugar, a toda la comunidad R por los desarrollos del programa R y en particular a @Xie2023 por el desarrollo de librerías como knitr o bookdown que nos han resultado muy útiles para la redacción de este trabajo. Asimismo, este trabajo se ha visto beneficiado del trabajo de @LuqueCalvo2017. Asimismo, a mis alumnos que han sido los mejores revisores del trabajo  aquí expuesto. 
+
+
+
+La elaboración de este trabajo se ha realizado bajo las condiciones de la licencia de Creative Commons
+https://creativecommons.org/share-your-work/public-domain/cc0:
+
+```{r, echo=FALSE,fig.align='center',out.width="30%"}
+knitr::include_graphics("figurasR/cc-zero.png")
+```
+
+Agosto de 2023.
