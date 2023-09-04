@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-09-01" />
+<meta name="date" content="2023-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -309,11 +309,11 @@ div.csl-indent {
 <p>En un determinado estudio existen <span class="math inline">\({2 \choose n}\)</span> parejas de medias que han de ser comparadas. En el caso del ejemplo 1, tenemos que decidir si <span class="math inline">\(\mu_A \neq \mu_B\)</span>, <span class="math inline">\(\mu_A \neq \mu_C\)</span> ó
 <span class="math inline">\(\mu_C \neq \mu_B\)</span>. Si solo tuviéramos que realizar una comparación la tasa de error sería <span class="math inline">\(\alpha\)</span> (error tipo I). Si <span class="math inline">\(\alpha\)</span> vale 0,05 la probabilidad de cometer un error tipo I será 0,05. Sin embargo, cuando realizamos más de una comparación esta probabilidad será diferente. Mientras mayor sea el número de comparaciones a realizar, mayor será la probabilidad de rechazar la hipótesis nula cuando es verdadera (error tipo I). En nuestro caso, si tenemos que realizar 3 comparaciones la probabilidad de no cometer un error tipo I será:</p>
 <p><span class="math display">\[
-P(ningún\; error\; tipo\; I) = {3 \choose 0}.05^0.95^3 = 0.857
+P(\text{ningún error tipo I}) = {3 \choose 0}.05^0.95^3 = 0.857
 \]</span></p>
 <p>Por lo que cometer algún error tipo I será 1 - 0,857 = 0,143. Es decir, la tasa de error tipo I aumenta a medida que aumentamos el número de comparaciones. En general, podemos considerar que la probabilidad de cometer al menos un error tipo I en <em>k</em> comparaciones utilizando <span class="math inline">\(\alpha\)</span> en cada comparación es:</p>
 <p><span class="math display">\[
-P(un\; error\; tipo\; I\;o\;mas) = 1 - (1 - \alpha)^k
+P(un\; error\; tipo\; I\;o\;más) = 1 - (1 - \alpha)^k
 \]</span></p>
 <p>El criterio de Bonferroni es uno de los procedimientos utilizados para corregir la tasa de error. Consiste en dividir el nivel de significación <span class="math inline">\(\alpha\)</span> (habitualmente <span class="math inline">\(\alpha\)</span> = 0,05) por el número de comparaciones que pueden realizarse en el diseño. En nuestro ejemplo será <span class="math inline">\(\alpha_{CB}\)</span> = 0,05/3 = 0,01667. Esta corrección tiene sentido en el caso de que se aplique varias veces una misma prueba estadística en un estudio, ya que la probabilidad de rechazar <span class="math inline">\(H_0\)</span> aumenta a medida que se incrementan las comparaciones posibles. Un criterio ligeramente diferente es el propuesto por Sidak. Este método es algo menos conservador que el de Bonferroni, ya que se cumple que <span class="math inline">\(\alpha_{CB} \leq \alpha_{CS}\)</span> Con ambos criterios se asume que las comparaciones son independientes.</p>
 <p><span class="math display">\[

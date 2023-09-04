@@ -33,6 +33,7 @@ tab:unnamed-chunk-42
 fig:unnamed-chunk-45
 fig:unnamed-chunk-46
 tab:Ej2
+fig:unnamed-chunk-47
 tab:unnamed-chunk-51
 fig:unnamed-chunk-62
 fig:unnamed-chunk-63
