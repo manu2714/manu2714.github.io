@@ -261,3 +261,17 @@ selección-de-modelos-en-el-programa-spss
 procedimiento-de-pasos-sucesivos
 modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes
 referencias
+fig:unnamed-chunk-1
+fig:unnamed-chunk-2
+fig:unnamed-chunk-3
+fig:unnamed-chunk-4
+fig:unnamed-chunk-6
+fig:unnamed-chunk-7
+fig:unnamed-chunk-8
+fig:unnamed-chunk-10
+fig:unnamed-chunk-11
+fig:unnamed-chunk-12
+tab:unnamed-chunk-3
+tab:unnamed-chunk-12
+tab:unnamed-chunk-13
+ejemplo-de-diseño-unifactorial-de-medidas-repetidas-no-paramétrico
