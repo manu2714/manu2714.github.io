@@ -322,7 +322,7 @@ Figura 6.4: Relación entre los años de escolarización y el tiempo en realizar
 <div id="normalidad" class="section level4 hasAnchor" number="6.4.0.2">
 <h4><span class="header-section-number">6.4.0.2</span> Normalidad<a href="supuestos-del-modelo.html#normalidad" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Este supuesto implica que los errores del modelo siguen una distribución normal. Para evaluar este modelo basta con calcular la diferencia entre las puntuaciones observadas y las predichas (residuales) y aplicar el estadístico de Shapiro-Wilks (SW) para determinar su significación. Aplicado al ejemplo de la figura 1 tenemos:</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="supuestos-del-modelo.html#cb62-1" tabindex="-1"></a><span class="fu">shapiro.test</span>(mod<span class="sc">$</span>residuals)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="supuestos-del-modelo.html#cb64-1" tabindex="-1"></a><span class="fu">shapiro.test</span>(mod<span class="sc">$</span>residuals)</span></code></pre></div>
 <pre><code>## 
 ##  Shapiro-Wilk normality test
 ## 
@@ -386,8 +386,8 @@ vamos a utilizar el ejemplo desarrollado anteriormente en el que se quiso relaci
 Atención_{i} = \beta_{0} + \beta_{1}*edad + \beta_{2}*educación +  \epsilon_{i}
 \]</span></p>
 <p>Los resultados que proporciona el programa R son los siguientes:</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="supuestos-del-modelo.html#cb64-1" tabindex="-1"></a>mod4<span class="ot">&lt;-</span> <span class="fu">lm</span>(atencion<span class="sc">~</span>AEC<span class="sc">+</span>edu,<span class="at">data=</span>dat)</span>
-<span id="cb64-2"><a href="supuestos-del-modelo.html#cb64-2" tabindex="-1"></a><span class="fu">summary</span>(mod4)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="supuestos-del-modelo.html#cb66-1" tabindex="-1"></a>mod4<span class="ot">&lt;-</span> <span class="fu">lm</span>(atencion<span class="sc">~</span>AEC<span class="sc">+</span>edu,<span class="at">data=</span>dat)</span>
+<span id="cb66-2"><a href="supuestos-del-modelo.html#cb66-2" tabindex="-1"></a><span class="fu">summary</span>(mod4)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = atencion ~ AEC + edu, data = dat)
