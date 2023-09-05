@@ -213,9 +213,9 @@ conclusiones
 diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca
 modelo-estadístico
 interacción-entre-factores
-ejemplo-1-de-diseño-factorial
+ejemplo-4.1-de-diseño-factorial
 cálculo-de-los-efectos-simples
-ejemplo-2-de-diseño-factorial
+ejemplo-4.2-de-diseño-factorial
 a2fc-con-el-programa-jamovi
 a2fc-con-el-programa-spss
 diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx
