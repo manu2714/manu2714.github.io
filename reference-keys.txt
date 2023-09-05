@@ -228,11 +228,11 @@ ejemplo-2-diseño-factorial-mixto
 medidas-del-tamaño-del-efecto
 comparaciones-múltiples-1
 análisis-de-los-ejemplos-con-spss
-análisis-del-ejemplo-1-con-spss
+análisis-del-ejemplo-5.1-con-spss
 estudio-de-la-interacción-1
 efectos-simples-con-el-programa-spss
 estudio-de-los-efectos-principales
-análisis-del-ejemplo-2-con-spss
+análisis-del-ejemplo-5.2-con-spss
 modelos-de-regresión-lineal
 correlación
 regresión-simple

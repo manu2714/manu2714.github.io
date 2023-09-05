@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-09-04" />
+<meta name="date" content="2023-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,8 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -253,8 +255,8 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html"><i class="fa fa-check"></i><b>5.3</b> Análisis de los ejemplos con SPSS</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-1-con-spss"><i class="fa fa-check"></i><b>5.3.1</b> Análisis del ejemplo 1 con SPSS</a></li>
-<li class="chapter" data-level="5.3.2" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-2-con-spss"><i class="fa fa-check"></i><b>5.3.2</b> Análisis del ejemplo 2 con SPSS</a></li>
+<li class="chapter" data-level="5.3.1" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-5.1-con-spss"><i class="fa fa-check"></i><b>5.3.1</b> Análisis del ejemplo 5.1 con SPSS</a></li>
+<li class="chapter" data-level="5.3.2" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-5.2-con-spss"><i class="fa fa-check"></i><b>5.3.2</b> Análisis del ejemplo 5.2 con SPSS</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="modelos-de-regresión-lineal.html"><a href="modelos-de-regresión-lineal.html"><i class="fa fa-check"></i><b>6</b> Modelos de regresión lineal</a>
@@ -312,32 +314,32 @@ div.csl-indent {
 <h3><span class="header-section-number">5.2.1</span> Ejemplo 2: Diseño factorial mixto<a href="diseño-factorial-mixto-a2fmx.html#ejemplo-2-diseño-factorial-mixto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ilustramos este tipo de diseños con un estudio en el que se realizó un seguimiento de un grupo de pacientes lesionados en distintos momentos del tratamiento. La VI que se estudio de manera longitudinal es el paso del <em>tiempo</em> (inicio, mitad y final); la VI que agrupa a los sujetos es la <em>localización de la lesión</em> (hemisferio izquierdo <em>versus</em> hemisferio derecho). La VD fueron los resultados en una prueba de memoria. En la siguiente tabla se presentan los descriptivos para cada una de las condiciones:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-141"></span>
-<img src="figurasR/desc52_jamovi.png" alt="Datos del ejemplo 2" width="70%" />
+<img src="figurasR/desc52_jamovi.png" alt="Descriptivos del ejemplo 5.2" width="90%" />
 <p class="caption">
-Figura 5.11: Datos del ejemplo 2
+Figura 5.11: Descriptivos del ejemplo 5.2
 </p>
 </div>
 <p>Una representación gráfica de las medias por condición aparece en la siguiente figura.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-144"></span>
-<img src="figurasR/fig_lesion.png" alt="Gráfica del ejemplo 2" width="70%" />
+<img src="figurasR/fig_lesion.png" alt="Gráfica del ejemplo 5.2" width="90%" />
 <p class="caption">
-Figura 5.12: Gráfica del ejemplo 2
+Figura 5.12: Gráfica del ejemplo 5.2
 </p>
 </div>
 <p>En la figura se aprecia que las diferencias en la prueba entre los dos grupos es pequeña en el momento final. También se aprecia que esas diferencias fueron máximas en la mitad de la intervención.</p>
 <p>Los resultados de este ejemplo indican la existencia de una interacción significativa:</p>
 <div style="page-break-after: always;"></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-145"></span>
-<img src="figurasR/res52_jamovi.png" alt="Modelo A2FMR en JAMOVI: Resultados del ejemplo 2" width="70%" />
+<img src="figurasR/res52_jamovi.png" alt="Modelo A2FMR en JAMOVI: Resultados del ejemplo 5.2" width="70%" />
 <p class="caption">
-Figura 5.13: Modelo A2FMR en JAMOVI: Resultados del ejemplo 2
+Figura 5.13: Modelo A2FMR en JAMOVI: Resultados del ejemplo 5.2
 </p>
 </div>
 <p>Para considerar como válidos estos resultados es necesario que se cumplan los supuestos del modelo (normalidad, homogeneidad de varianzas-covarianzas y esfericidad). En relación con el supuesto de esfericidad la prueba de Mauchly confirma su existencia:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-146"></span>
-<img src="figurasR/esfericidad52_jamovi.png" alt="Modelo A2FMR en JAMOVI: Prueba de esfericidad del ejemplo 2" width="70%" />
+<img src="figurasR/esfericidad52_jamovi.png" alt="Modelo A2FMR en JAMOVI: Prueba de esfericidad del ejemplo 5.2" width="90%" />
 <p class="caption">
-Figura 5.14: Modelo A2FMR en JAMOVI: Prueba de esfericidad del ejemplo 2
+Figura 5.14: Modelo A2FMR en JAMOVI: Prueba de esfericidad del ejemplo 5.2
 </p>
 </div>
 <div id="medidas-del-tamaño-del-efecto" class="section level4 hasAnchor" number="5.2.1.1">
@@ -366,7 +368,7 @@ Figura 5.14: Modelo A2FMR en JAMOVI: Prueba de esfericidad del ejemplo 2
 <h4><span class="header-section-number">5.2.1.2</span> Comparaciones múltiples<a href="diseño-factorial-mixto-a2fmx.html#comparaciones-múltiples-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En el caso de que no resulte signficativo el efecto de la interacción AB y exista algún efecto principal (A y/o B) significativo habrá que continuar realizando las comparaciones <em>a posteriori</em> tal y como se indicó en los temas anteriores. Si el efecto interactivo AB resulta significativo será necesario realizar las comparaciones de los efectos simples. Para ello se calculan las diferencias entre las distintas medidas repetidas. Esas diferencias se comparan entre los distintos grupos tal y como se hizo en el tema 1 para la comparación de muestras independientes. En nuestro caso los resultados aparecen en la siguiente tabla:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-147"></span>
-<img src="figurasR/simples52_jamovi.png" alt="Modelo A2FMR en JAMOVI: Comparación de los efectos simples" width="70%" />
+<img src="figurasR/simples52_jamovi.png" alt="Modelo A2FMR en JAMOVI: Comparación de los efectos simples" width="90%" />
 <p class="caption">
 Figura 5.15: Modelo A2FMR en JAMOVI: Comparación de los efectos simples
 </p>
