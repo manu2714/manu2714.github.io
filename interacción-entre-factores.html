@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.2 Interacción entre factores | Análisis de datos en psicología II</title>
+  <meta name="description" content="Libro de DAD2" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.2 Interacción entre factores | Análisis de datos en psicología II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Libro de DAD2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.2 Interacción entre factores | Análisis de datos en psicología II" />
+  
+  <meta name="twitter:description" content="Libro de DAD2" />
+  
+
+<meta name="author" content="Manuel Morales Ortiz" />
+
+
+<meta name="date" content="2023-09-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="modelo-estadístico.html"/>
+<link rel="next" href="a2fc-con-el-programa-jamovi.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Análisis de Datos II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
+<li class="chapter" data-level="1" data-path="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><a href="introducción-a-los-procedimientos-de-investigación-en-psicología.html"><i class="fa fa-check"></i><b>1</b> Introducción a los procedimientos de investigación en Psicología</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lógica-de-la-investigación-científica.html"><a href="lógica-de-la-investigación-científica.html"><i class="fa fa-check"></i><b>1.1</b> Lógica de la investigación científica</a></li>
+<li class="chapter" data-level="1.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html"><i class="fa fa-check"></i><b>1.2</b> Validez de las investigaciones</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-las-variables-y-definiciones"><i class="fa fa-check"></i><b>1.2.1</b> Validez de las variables y definiciones</a></li>
+<li class="chapter" data-level="1.2.2" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-del-diseño-de-investigación"><i class="fa fa-check"></i><b>1.2.2</b> Validez del diseño de investigación</a></li>
+<li class="chapter" data-level="1.2.3" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#validez-de-conclusión-estadística"><i class="fa fa-check"></i><b>1.2.3</b> Validez de conclusión estadística</a></li>
+<li class="chapter" data-level="1.2.4" data-path="validez-de-las-investigaciones.html"><a href="validez-de-las-investigaciones.html#contraste-de-hipótesis-estadísticas"><i class="fa fa-check"></i><b>1.2.4</b> Contraste de hipótesis estadísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="potencia-de-un-contraste.html"><a href="potencia-de-un-contraste.html"><i class="fa fa-check"></i><b>1.3</b> Potencia de un contraste</a></li>
+<li class="chapter" data-level="1.4" data-path="tamaño-del-efecto.html"><a href="tamaño-del-efecto.html"><i class="fa fa-check"></i><b>1.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="1.5" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><i class="fa fa-check"></i><b>1.5</b> Contrastes de hipótesis en los programas estadísticos</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-variable"><i class="fa fa-check"></i><b>1.5.1</b> Contrastes para 1 variable</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#contrastes-para-1-vi-cualitativa-y-una-vd-cuantitativa"><i class="fa fa-check"></i><b>1.5.2</b> Contrastes para 1 VI cualitativa y una VD cuantitativa</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contrastes-de-hipótesis-en-los-programas-estadísticos.html"><a href="contrastes-de-hipótesis-en-los-programas-estadísticos.html#pruebas-para-muestras-relacionadas-2-medidas-por-unidad-de-observación"><i class="fa fa-check"></i><b>1.5.3</b> Pruebas para muestras relacionadas (2 medidas por unidad de observación)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-i-diseños-transversales.html"><i class="fa fa-check"></i><b>2</b> Relación entre una variable cualitativa y otra cuantitativa (I): Diseños transversales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="criterios-de-selección-de-la-técnica-estadística.html"><a href="criterios-de-selección-de-la-técnica-estadística.html"><i class="fa fa-check"></i><b>2.1</b> Criterios de selección de la técnica estadística</a></li>
+<li class="chapter" data-level="2.2" data-path="anova-de-1-factor-completamente-aleatorizado.html"><a href="anova-de-1-factor-completamente-aleatorizado.html"><i class="fa fa-check"></i><b>2.2</b> ANOVA de 1 factor completamente aleatorizado</a></li>
+<li class="chapter" data-level="2.3" data-path="comprobación-de-los-supuestos.html"><a href="comprobación-de-los-supuestos.html"><i class="fa fa-check"></i><b>2.3</b> Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="2.4" data-path="tamaño-del-efecto-1.html"><a href="tamaño-del-efecto-1.html"><i class="fa fa-check"></i><b>2.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="2.5" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html"><i class="fa fa-check"></i><b>2.5</b> Comparaciones a posteriori</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#criterio-de-bonferroni"><i class="fa fa-check"></i><b>2.5.1</b> Criterio de Bonferroni</a></li>
+<li class="chapter" data-level="2.5.2" data-path="comparaciones-a-posteriori.html"><a href="comparaciones-a-posteriori.html#prueba-de-tukey"><i class="fa fa-check"></i><b>2.5.2</b> Prueba de Tukey</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="comparaciones-de-tendencia.html"><a href="comparaciones-de-tendencia.html"><i class="fa fa-check"></i><b>2.6</b> Comparaciones de tendencia</a></li>
+<li class="chapter" data-level="2.7" data-path="estadísticos-f-robustos-brown-forsythe-y-welch.html"><a href="estadísticos-f-robustos-brown-forsythe-y-welch.html"><i class="fa fa-check"></i><b>2.7</b> Estadísticos F robustos: Brown-Forsythe y Welch</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="estadísticos-f-robustos-brown-forsythe-y-welch.html"><a href="estadísticos-f-robustos-brown-forsythe-y-welch.html#comparaciones-a-posteriori-1"><i class="fa fa-check"></i><b>2.7.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html"><i class="fa fa-check"></i><b>2.8</b> Prueba de Kuskal-Wallis (KW)</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="prueba-de-kuskal-wallis-kw.html"><a href="prueba-de-kuskal-wallis-kw.html#comparaciones-a-posteriori-2"><i class="fa fa-check"></i><b>2.8.1</b> Comparaciones a posteriori</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="anova-de-un-factor-con-jamovi.html"><a href="anova-de-un-factor-con-jamovi.html"><i class="fa fa-check"></i><b>2.9</b> ANOVA de un factor con JAMOVI</a></li>
+<li class="chapter" data-level="2.10" data-path="anova-de-un-factor-con-spss.html"><a href="anova-de-un-factor-con-spss.html"><i class="fa fa-check"></i><b>2.10</b> ANOVA de un factor con SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-ii-diseños-longitudinales.html"><a href="relación-entre-una-variable-cualitativa-y-otra-cuantitativa-ii-diseños-longitudinales.html"><i class="fa fa-check"></i><b>3</b> Relación entre una variable cualitativa y otra cuantitativa (II): Diseños longitudinales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><a href="modelo-anova-1-factor-de-medidas-repetidas-a1mr.html"><i class="fa fa-check"></i><b>3.1</b> Modelo ANOVA 1 factor de medidas repetidas (A1MR)</a></li>
+<li class="chapter" data-level="3.2" data-path="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><a href="ejemplo-1-de-diseño-unifactorial-de-medidas-repetidas.html"><i class="fa fa-check"></i><b>3.2</b> Ejemplo 1 de diseño unifactorial de medidas repetidas</a></li>
+<li class="chapter" data-level="3.3" data-path="comprobación-de-los-supuestos-1.html"><a href="comprobación-de-los-supuestos-1.html"><i class="fa fa-check"></i><b>3.3</b> Comprobación de los supuestos</a></li>
+<li class="chapter" data-level="3.4" data-path="tamaño-del-efecto-2.html"><a href="tamaño-del-efecto-2.html"><i class="fa fa-check"></i><b>3.4</b> Tamaño del efecto</a></li>
+<li class="chapter" data-level="3.5" data-path="potencia-de-la-prueba.html"><a href="potencia-de-la-prueba.html"><i class="fa fa-check"></i><b>3.5</b> Potencia de la prueba</a></li>
+<li class="chapter" data-level="3.6" data-path="comparaciones-múltiples.html"><a href="comparaciones-múltiples.html"><i class="fa fa-check"></i><b>3.6</b> Comparaciones múltiples</a></li>
+<li class="chapter" data-level="3.7" data-path="prueba-de-friedman.html"><a href="prueba-de-friedman.html"><i class="fa fa-check"></i><b>3.7</b> Prueba de Friedman</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="prueba-de-friedman.html"><a href="prueba-de-friedman.html#ejemplo-de-diseño-unifactorial-de-medidas-repetidas-no-paramétrico"><i class="fa fa-check"></i><b>3.7.1</b> Ejemplo de diseño unifactorial de medidas repetidas no paramétrico</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="modelo-a1fmr-con-el-programa-jamovi.html"><a href="modelo-a1fmr-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>3.8</b> Modelo A1FMR con el programa JAMOVI</a></li>
+<li class="chapter" data-level="3.9" data-path="prueba-de-friedman-con-el-programa-jamovi.html"><a href="prueba-de-friedman-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>3.9</b> Prueba de Friedman con el programa JAMOVI</a></li>
+<li class="chapter" data-level="3.10" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.10</b> Modelo A1FMR con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="modelo-a1fmr-con-el-programa-spss.html"><a href="modelo-a1fmr-con-el-programa-spss.html#conclusiones-según-normas-apa"><i class="fa fa-check"></i><b>3.10.1</b> Conclusiones según normas APA:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="prueba-de-friedman-con-el-programa-spss.html"><a href="prueba-de-friedman-con-el-programa-spss.html"><i class="fa fa-check"></i><b>3.11</b> Prueba de Friedman con el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="prueba-de-friedman-con-el-programa-spss.html"><a href="prueba-de-friedman-con-el-programa-spss.html#conclusiones"><i class="fa fa-check"></i><b>3.11.1</b> Conclusiones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><a href="diseños-factoriales-i-diseño-factorial-completamente-aleatorizado-a2fca.html"><i class="fa fa-check"></i><b>4</b> Diseños factoriales (I): Diseño factorial completamente aleatorizado (A2FCA)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modelo-estadístico.html"><a href="modelo-estadístico.html"><i class="fa fa-check"></i><b>4.1</b> Modelo estadístico</a></li>
+<li class="chapter" data-level="4.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html"><i class="fa fa-check"></i><b>4.2</b> Interacción entre factores</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-4.1-de-diseño-factorial"><i class="fa fa-check"></i><b>4.2.1</b> Ejemplo 4.1 de diseño factorial</a></li>
+<li class="chapter" data-level="4.2.2" data-path="interacción-entre-factores.html"><a href="interacción-entre-factores.html#ejemplo-4.2-de-diseño-factorial"><i class="fa fa-check"></i><b>4.2.2</b> Ejemplo 4.2 de diseño factorial</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="a2fc-con-el-programa-jamovi.html"><a href="a2fc-con-el-programa-jamovi.html"><i class="fa fa-check"></i><b>4.3</b> A2FC con el programa JAMOVI</a></li>
+<li class="chapter" data-level="4.4" data-path="a2fc-con-el-programa-spss.html"><a href="a2fc-con-el-programa-spss.html"><i class="fa fa-check"></i><b>4.4</b> A2FC con el programa SPSS</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><a href="diseños-factoriales-ii-diseño-factorial-con-medidas-repetidas-a2fmr-y-a2fmx.html"><i class="fa fa-check"></i><b>5</b> Diseños factoriales (II): Diseño factorial con medidas repetidas (A2FMR y A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html"><i class="fa fa-check"></i><b>5.1</b> Diseño factorial intrasujeto</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="diseño-factorial-intrasujeto.html"><a href="diseño-factorial-intrasujeto.html#ejemplo-1-diseño-factorial-de-medidas-repetidas"><i class="fa fa-check"></i><b>5.1.1</b> Ejemplo 1: Diseño factorial de medidas repetidas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html"><i class="fa fa-check"></i><b>5.2</b> Diseño factorial mixto (A2FMX)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="diseño-factorial-mixto-a2fmx.html"><a href="diseño-factorial-mixto-a2fmx.html#ejemplo-2-diseño-factorial-mixto"><i class="fa fa-check"></i><b>5.2.1</b> Ejemplo 2: Diseño factorial mixto</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html"><i class="fa fa-check"></i><b>5.3</b> Análisis de los ejemplos con SPSS</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-5.1-con-spss"><i class="fa fa-check"></i><b>5.3.1</b> Análisis del ejemplo 5.1 con SPSS</a></li>
+<li class="chapter" data-level="5.3.2" data-path="análisis-de-los-ejemplos-con-spss.html"><a href="análisis-de-los-ejemplos-con-spss.html#análisis-del-ejemplo-5.2-con-spss"><i class="fa fa-check"></i><b>5.3.2</b> Análisis del ejemplo 5.2 con SPSS</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modelos-de-regresión-lineal.html"><a href="modelos-de-regresión-lineal.html"><i class="fa fa-check"></i><b>6</b> Modelos de regresión lineal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="correlación.html"><a href="correlación.html"><i class="fa fa-check"></i><b>6.1</b> Correlación</a></li>
+<li class="chapter" data-level="6.2" data-path="regresión-simple.html"><a href="regresión-simple.html"><i class="fa fa-check"></i><b>6.2</b> Regresión simple</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="regresión-simple.html"><a href="regresión-simple.html#predictores-categóricos"><i class="fa fa-check"></i><b>6.2.1</b> Predictores categóricos</a></li>
+<li class="chapter" data-level="6.2.2" data-path="regresión-simple.html"><a href="regresión-simple.html#realización-de-pronósticos"><i class="fa fa-check"></i><b>6.2.2</b> Realización de pronósticos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="regresión-lineal-múltiple.html"><a href="regresión-lineal-múltiple.html"><i class="fa fa-check"></i><b>6.3</b> Regresión lineal múltiple</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="regresión-lineal-múltiple.html"><a href="regresión-lineal-múltiple.html#selección-de-modelos"><i class="fa fa-check"></i><b>6.3.1</b> Selección de modelos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="regresión-lineal-múltiple.html"><a href="regresión-lineal-múltiple.html#importancia-de-las-variables"><i class="fa fa-check"></i><b>6.3.2</b> Importancia de las variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="supuestos-del-modelo.html"><a href="supuestos-del-modelo.html"><i class="fa fa-check"></i><b>6.4</b> Supuestos del modelo</a></li>
+<li class="chapter" data-level="6.5" data-path="regresión-múltiple-y-modelos-estadísticos.html"><a href="regresión-múltiple-y-modelos-estadísticos.html"><i class="fa fa-check"></i><b>6.5</b> Regresión múltiple y modelos estadísticos</a></li>
+<li class="chapter" data-level="6.6" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html"><i class="fa fa-check"></i><b>6.6</b> Análisis de regresión mediante el programa JAMOVI</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html#regresión-lineal-múltiple-1"><i class="fa fa-check"></i><b>6.6.1</b> Regresión lineal múltiple</a></li>
+<li class="chapter" data-level="6.6.2" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html#modelo-de-moderación-con-jamovi"><i class="fa fa-check"></i><b>6.6.2</b> Modelo de moderación con JAMOVI</a></li>
+<li class="chapter" data-level="6.6.3" data-path="análisis-de-regresión-mediante-el-programa-jamovi.html"><a href="análisis-de-regresión-mediante-el-programa-jamovi.html#modelos-de-mediación"><i class="fa fa-check"></i><b>6.6.3</b> Modelos de mediación</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html"><i class="fa fa-check"></i><b>6.7</b> Análisis de regresión mediante el programa SPSS</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#selección-de-modelos-en-el-programa-spss"><i class="fa fa-check"></i><b>6.7.1</b> Selección de modelos en el programa SPSS</a></li>
+<li class="chapter" data-level="6.7.2" data-path="análisis-de-regresión-mediante-el-programa-spss.html"><a href="análisis-de-regresión-mediante-el-programa-spss.html#modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes"><i class="fa fa-check"></i><b>6.7.2</b> Modelos de moderación y mediación con el módulo de PROCESS <span class="citation">(Hayes, 2013)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>7</b> Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de datos en psicología II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="interacción-entre-factores" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Interacción entre factores<a href="interacción-entre-factores.html#interacción-entre-factores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Conceptualmente podemos considerar que la <em>interacción</em> entre factores hace referencia a que <em>el efecto de una VI sobre la VD depende del valor que está presente de la otra VI</em>. Ahora bien, desde un punto de vista más formal el efecto interactivo se define de la siguiente forma:</p>
+<p><span class="math display">\[
+\alpha\beta_{jk}= \mu_{jk} - (\mu_{++} + \alpha_{j} + \beta_k)
+\]</span></p>
+<p>Existe interacción cuando <span class="math inline">\(\alpha\beta_{jk} \neq\)</span> 0 para algún <em>jk</em>. <span class="citation">Pardo &amp; San Martin (<a href="referencias.html#ref-pardo">2010</a>)</span> consideran que esta expresión puede interpretarse de dos formas:</p>
+<ol style="list-style-type: decimal">
+<li><p>Como <em>desviación que experimentan las medias de las casillas con respecto a los efectos principales de los factores</em>:</p>
+<ul>
+<li>No interacción: <span class="math inline">\(\mu_{jk} = \mu_{j+} \mu_{+k} - \mu_{++}\)</span> (para todo <em>j</em> y <em>k</em>)</li>
+<li>Interacción: <span class="math inline">\(\mu_{jk} \neq \mu_{j+} \mu_{+k} - \mu_{++}\)</span> (para todo <em>j</em> y <em>k</em>)</li>
+</ul></li>
+<li><p>Como <em>diferencias entre las medias de las casillas y las medias marginales</em>:</p>
+<ul>
+<li>No interacción: <span class="math inline">\(\mu_{jk} - \mu_{j&#39;k} = \mu_{j+} - \mu_{j&#39;+}\)</span> (para todo <em>j</em>, <em>j’</em> ó <em>k</em>)</li>
+<li>Interacción: <span class="math inline">\(\mu_{jk} - \mu_{j&#39;k} \neq \mu_{j+} - \mu_{j&#39;+}\)</span> (para todo <em>j</em>, <em>j’</em> ó <em>k</em>)</li>
+</ul></li>
+</ol>
+<p>Estas dos conceptualizaciones del efecto interactivo al final se traducen en el concepto anteriormente mencionado de la existencia de interacción siempre y cuando las diferencias de un factor (p. ejemplo, el factor A), son distintas dependiendo del valor que está presente del otro factor B. En la siguiente figura se presentan dos situaciones donde en la primera de ellas no existe interacción entre las variables y en la otra si.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-106"></span>
+<img src="figurasR/modfact2.png" alt="Medias de dos diseños factoriales con y sin interacción" width="450px" />
+<p class="caption">
+Figura 4.2: Medias de dos diseños factoriales con y sin interacción
+</p>
+</div>
+<p>Gráficamente es muy fácil apreciar la existencia (o no) de interacción: cuando las líneas son paralelas no existe interacción. Por el contrario, si las líneas se cruzan o no son paralelas hablamos de interacción. En la figura 3 izquierda se observa con claridad que cualquier valor del factor B cambia en 2 unidades siempre, dependiendo de que esté presente el valor de <span class="math inline">\(a_1\)</span> o <span class="math inline">\(a_2\)</span>. En cambio, en la figura de la derecha los cambios no son uniformes. Son mucho más elevados cuando el valor de B es <span class="math inline">\(b_2\)</span> que cuando el valor de B es <span class="math inline">\(b_1\)</span> ó <span class="math inline">\(b_3\)</span>. Es más, se observa que el cambio significativo en el factor A es sólo cuando está presente <span class="math inline">\(b_2\)</span>. Cuando están presentes los otros valores de B los cambios son muy parecidos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-107"></span>
+<img src="figurasR/fact_simu.png" alt="Representación gráfica de dos diseños factoriales sin y con interacción" width="450px" />
+<p class="caption">
+Figura 4.3: Representación gráfica de dos diseños factoriales sin y con interacción
+</p>
+</div>
+<div id="ejemplo-4.1-de-diseño-factorial" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Ejemplo 4.1 de diseño factorial<a href="interacción-entre-factores.html#ejemplo-4.1-de-diseño-factorial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos que estamos interesados en estudiar si el efecto de la dieta (<span class="math inline">\(a_1\)</span> = Dieta A, <span class="math inline">\(a_2\)</span> = Dieta B) sobre la actividad motora depende de las horas de sueño <span class="math inline">\(b_1\)</span> = 2 horas, <span class="math inline">\(b_2\)</span> = 4 horas y <span class="math inline">\(b_3\)</span> = 6 horas). Los resultados de los sujetos aparecen a continuación:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-108"></span>
+<img src="figurasR/ejemplo31.png" alt="Datos del ejemplo 4.1" width="70%" />
+<p class="caption">
+Figura 4.4: Datos del ejemplo 4.1
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Analizando estos datos nos encontramos que existe un efecto interactivo entre la variable tipo de dieta y horas de sueño (ver tabla 4.1). Asimismo, podemos comprobar mediante el estadístico de Levene que se cumple el supuesto de homogeneidad (ver tabla 4.2).</p>
+<table>
+<caption>
+<span id="tab:unnamed-chunk-109">Tabla 4.1: </span>Resultados del ejemplo 4.1
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+Sum Sq
+</th>
+<th style="text-align:right;">
+Mean Sq
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+horas
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+37.27
+</td>
+<td style="text-align:right;">
+18.63
+</td>
+<td style="text-align:right;">
+5.11
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dieta
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+12.03
+</td>
+<td style="text-align:right;">
+12.03
+</td>
+<td style="text-align:right;">
+3.30
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+horas:Dieta
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+28.47
+</td>
+<td style="text-align:right;">
+14.23
+</td>
+<td style="text-align:right;">
+3.90
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residuals
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+87.60
+</td>
+<td style="text-align:right;">
+3.65
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>
+<span id="tab:unnamed-chunk-110">Tabla 4.2: </span>Prueba de Levene del ejemplo 4.1
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+group
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+0.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+<p>En la siguiente figura observamos que el efecto de la dieta sobre la actividad motora es prácticamente inexistente cuando los animales durmieron 2 o 6 horas. Sin embargo, se produce una gran diferencia en la actividad motora con la dieta A cuando los animales durmieron 4 horas (condición <span class="math inline">\(a_1b_2\)</span>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-111"></span>
+<img src="figurasR/fact_ejemplo31_jamovi.png" alt="Representación gráfica del ejemplo 4.1" width="70%" />
+<p class="caption">
+Figura 4.5: Representación gráfica del ejemplo 4.1
+</p>
+</div>
+<div id="cálculo-de-los-efectos-simples" class="section level4 hasAnchor" number="4.2.1.1">
+<h4><span class="header-section-number">4.2.1.1</span> Cálculo de los efectos simples<a href="interacción-entre-factores.html#cálculo-de-los-efectos-simples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Una vez que se constata la existencia de interacción en el diseño, el paso siguiente consiste en interpretar la interacción mediante la comparación de los efectos simples. Un efecto simple calcula la diferencia de dos valores de la VD en presencia de dos valores distintos de la VI, manteniendo constante el valor de una tercera. Consideremos los valores medios de nuestro ejemplo 1:</p>
+<table>
+<caption>
+<span id="tab:tab42">Tabla 4.3: </span>Medias de las condiciones del ejemplo 4.1
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;">
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(a_1b_1\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(a_2b_1\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(a_1b_2\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(a_2b_2\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(a_1b_3\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(a_2b_3\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Medias
+</td>
+<td style="text-align:right;">
+6.6
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+6.6
+</td>
+<td style="text-align:right;">
+6.4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+</tbody>
+</table>
+<p>Los efectos simples de la variable dieta serían:</p>
+<ol style="list-style-type: decimal">
+<li>Comparar los valores medios de las dieta A con la dieta B cuando los animales durmieron 2 horas:</li>
+</ol>
+<p><span class="math display">\[
+Efecto \; simple \; de \; A =  \overline{X}_{a_1b_1}- \overline{X}_{a_2b_1} = 6.6 - 6.4 = 0.2
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Comparar los valores medios de las dieta A con la dieta B cuando los animales durmieron 4 horas:</li>
+</ol>
+<p><span class="math display">\[
+Efecto \; simple \; de \; A =  \overline{X}_{a_1b_2} - \overline{X}_{a_2b_2} = 11 - 7 = 4
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Comparar los valores medios de las dieta A con la dieta B cuando los animales durmieron 6 horas:</li>
+</ol>
+<p><span class="math display">\[
+Efecto \; simple \; de \; A =  \overline{X}_{a_1b_3} - \overline{X}_{a_2b_3} = 6.6 - 7 = -0.4
+\]</span></p>
+<p>Para determinar el efecto de la interacción necesitamos comparar entre sí todos estos efectos simples. Así, en este diseño tendremos tres comparaciones:</p>
+<ol style="list-style-type: decimal">
+<li>Comparación del efecto simple de A (dieta) en <span class="math inline">\(b_1\)</span> (2 horas de sueño) con el efecto simple de A en <span class="math inline">\(b_2\)</span> (4 horas de sueño):</li>
+</ol>
+<p><span class="math display">\[
+\phi_1 = \overline{X}_{a_1b_1}- \overline{X}_{a_2b_1} - (\overline{X}_{a_1b_2}- \overline{X}_{a_2b_2}) = 6.6 - 6.4 - 11 + 7 = -3.8
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Comparación del efecto simple de A (dieta) en <span class="math inline">\(b_1\)</span> (2 horas de sueño) con el efecto simple de A en <span class="math inline">\(b_3\)</span> (6 horas de sueño):</li>
+</ol>
+<p><span class="math display">\[
+\phi_2 = \overline{X}_{a_1b_1} - \overline{X}_{a_2b_1} - (\overline{X}_{a_1b_3} - \overline{X}_{a_2b_3}) = 6.6 - 6.4 - 6.6 + 7 = 0.6
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Comparación del efecto simple de A (dieta) en <span class="math inline">\(b_2\)</span> (4 horas de sueño) con el efecto simple de A en <span class="math inline">\(b_3\)</span> (6 horas de sueño):</li>
+</ol>
+<p><span class="math display">\[
+\phi_1 = \overline{X}_{a_1b_1} - \overline{X}_{a_2b_1} - (\overline{X}_{a_1b_2}- \overline{X}_{a_2b_2}) = 11 - 7 - 6.6 + 7 = 4.4
+\]</span></p>
+<p>Observamos que las diferencias se establecen cuando se comparan los efectos simples de A con el valor <span class="math inline">\(b_2\)</span> (4 horas de sueño). En los otros las diferencias son pequeñas. No obstante, debemos considerar si esas diferencias encontradas cuando se comparan dos efectos simples se deben al azar. La comparación de los contraste anteriores y la varianza del error permite obtener un estadístico <em>t</em> que se distribuye como una distribución <em>t</em> teórica con 24 grados de libertad. Una estimación de la varianza del error puede hacerse promediando las varianzas de las condiciones del diseño. En nuestro caso, sería:</p>
+<table>
+<caption>
+<span id="tab:unnamed-chunk-112">Tabla 4.4: </span>Desviaciones tipo de las condiciones del ejemplo 4.1
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;">
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(s_{a_1b_1}\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(s_{a_2b_1}\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(s_{a_1b_2}\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(s_{a_2b_2}\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(s_{a_1b_3}\)</span>
+</th>
+<th style="text-align:right;font-weight: bold;">
+<span class="math inline">\(s_{a_2b_3}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+valor
+</td>
+<td style="text-align:right;">
+1.95
+</td>
+<td style="text-align:right;">
+1.82
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.87
+</td>
+<td style="text-align:right;">
+1.95
+</td>
+<td style="text-align:right;">
+1.87
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+Var_{error} = \frac{1.95+1.82+2+1.87+1.95+1.87}{6} = 1.91
+\]</span></p>
+<p>Calculando el estadístico <em>t</em> para cada uno de los contrastes:</p>
+<ul>
+<li>Primer contraste:</li>
+</ul>
+<p><span class="math display">\[
+t = \frac{\phi_1}{Var_{error}} = \frac{-3.8}{1.91} = 1.99
+\]</span></p>
+<ul>
+<li>Segundo contraste:</li>
+</ul>
+<p><span class="math display">\[
+t = \frac{\phi_2}{Var_{error}} = \frac{0.6}{1.91} = 0.31
+\]</span></p>
+<ul>
+<li>Tercer contraste:</li>
+</ul>
+<p><span class="math display">\[
+t = \frac{\phi_3}{Var_{error}} = \frac{4.4}{1.91} = 2.30
+\]</span></p>
+<p>El estadístico <em>t</em> para un nivel de confianza del 95% tiene un valor de 1.71 por lo que puede considerarse que el primer (<span class="math inline">\(\phi_1\)</span>) y el tercer contraste (<span class="math inline">\(\phi_3\)</span>) resultan significativos (F(2,24) = 3.9, p = .034, <span class="math inline">\(\eta_p\)</span> = 0.298, indicando un tamaño de efecto grande). Observando en la figura apreciamos que <strong><em>el efecto de la dieta con 4 horas de sueño fue significativamente distinto en comparación con el efecto de la dieta a las 2 horas (t(24) = 1.99, p =.029) y 6 horas de sueño (t(24) = 2.30, p =.015)</em></strong>.</p>
+</div>
+</div>
+<div id="ejemplo-4.2-de-diseño-factorial" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Ejemplo 4.2 de diseño factorial<a href="interacción-entre-factores.html#ejemplo-4.2-de-diseño-factorial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos que estamos interesados en estudiar si la memoria de trabajo de escolares se veía afectada por las variables edad y cantidad de zonas verdes próximas al centro educativo. Para realizar el análisis de los datos debemos asegurarnos de que se cumplen los supuestos de la prueba (normalidad y homogeneidad de las varianzas). En la siguiente figura se representan los datos por condición del estudio.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-113"></span>
+<img src="figurasR/boxplot_ejemplo2.png" alt="Boxplot del ejemplo 4.2" width="400px" />
+<p class="caption">
+Figura 4.6: Boxplot del ejemplo 4.2
+</p>
+</div>
+<p>Realizando el análisis de la varianza observamos que la interacción no resulta significativa, siendo la edad el único factor significativo. Por tanto, en este diseño lo único que hay que hacer es determinar si existen diferencias significativas entre las distintas edades. Para ello hay que realizar algún procedimiento <em>post hoc</em> como el de Tukey.</p>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-114"></span>
+<img src="figurasR/anova_ejemplo2.png" alt="Resultados del ejemplo 4.2" width="450px" />
+<p class="caption">
+Figura 4.7: Resultados del ejemplo 4.2
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-115"></span>
+<img src="figurasR/tuckey_ejemplo2.png" alt="Prueba de Tuckey para las comparaciones de edad del ejemplo 4.2" width="400px" />
+<p class="caption">
+Figura 4.8: Prueba de Tuckey para las comparaciones de edad del ejemplo 4.2
+</p>
+</div>
+<p>Los resultados indican que sólo hubo un <strong><em>efecto significativo de la edad F(2,24) = 9.04, p = 0.001, <span class="math inline">\(\eta^2\)</span> parcial = 0.43 indicando un tamaño del efecto grande). Las comparaciones a posteriori de Tukey indicaron que hubo diferencias significativas en la memoria de trabajo a los 6 años (M = 11.40) comparado con los 7 años de edad (M = 16.60, p &lt; .001)</em></strong>.</p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="modelo-estadístico.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a2fc-con-el-programa-jamovi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-Tema4.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
