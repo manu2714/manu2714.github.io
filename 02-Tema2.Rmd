@@ -19,7 +19,7 @@ En la siguiente figura aparece el árbol de decisión para elegir la técnica es
 
 
 ```{r, echo=FALSE,fig.cap= "Clasificación de las técnicas de análisis",out.width="70%"}
-knitr::include_graphics("figurasR/ANOVA1F.jpg")
+knitr::include_graphics("figurasR/anova1f2.jpg")
 ```
 
 

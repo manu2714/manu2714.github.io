@@ -257,3 +257,7 @@ selección-de-modelos-en-el-programa-spss
 procedimiento-de-pasos-sucesivos
 modelos-de-moderación-y-mediación-con-el-módulo-de-process-hayes
 referencias
+fig:unnamed-chunk-1
+fig:unnamed-chunk-2
+fig:unnamed-chunk-10
+tab:unnamed-chunk-15
