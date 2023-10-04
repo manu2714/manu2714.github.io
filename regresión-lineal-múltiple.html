@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-09-22" />
+<meta name="date" content="2023-10-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -356,13 +356,13 @@ F_{cambio|X_{j}}= \frac{R_{cambio|X_{j}}^{2}(n-p-1)}{1 - R_{12 \ldots p}^{2}} = 
 <p>Comparando este resultado con el de las tablas para una F con 1 y grados de libertad y un nivel de significación del 0.05 obtenemos un valor de F(1,27) = 4.21. Por tanto, a pesar de aumentar el índice de ajuste, éste incremento no resulta ser significativo por lo que el modelo óptimo no cambia. Introducir la variable educación en el modelo no mejora significativamente el ajuste. Si calculamos la raiz cuadrada de 2.79 obtenemos el valor del estadístico t correspondiente al parámetro beta de la variable educación tal y como puede observarse en la siguiente tabla:</p>
 <p>Mediante este procedimiento sólo se incluye la variable edad, ya que es la única que cumple el criterio de significación (<span class="math inline">\(p(F) \leq.05)\)</span>. El resto de variables son excluidas por no cumplir dicho criterio.</p>
 <p>El método de selección hacia atrás comienza con el modelo máximo. En cada paso, se elimina aquel predictor que cumple el criterio de eliminación (p(F)&gt;.05) y con mayor nivel de significación. Este procedimiento continua hasta que todos los predictores presentes en el modelo son significativos o no quedan predictores en el modelo. Utilizando el mismo modelo, pero cambiando la opción de Método por tal y como aparece en la siguiente figura nos encontramos que el programa comienza con el modelo máximo (las tres variables incluidas) y elimina aquellas variables que no cumplen el criterio (p(F)&lt; .1). el resultado final es el mismo que en el caso anterior:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="regresión-lineal-múltiple.html#cb52-1" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
-<span id="cb52-2"><a href="regresión-lineal-múltiple.html#cb52-2" tabindex="-1"></a>dat1<span class="ot">&lt;-</span> dat[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>)]</span>
-<span id="cb52-3"><a href="regresión-lineal-múltiple.html#cb52-3" tabindex="-1"></a><span class="fu">names</span>(dat1)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="regresión-lineal-múltiple.html#cb54-1" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
+<span id="cb54-2"><a href="regresión-lineal-múltiple.html#cb54-2" tabindex="-1"></a>dat1<span class="ot">&lt;-</span> dat[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>)]</span>
+<span id="cb54-3"><a href="regresión-lineal-múltiple.html#cb54-3" tabindex="-1"></a><span class="fu">names</span>(dat1)</span></code></pre></div>
 <pre><code>## [1] &quot;edad&quot;    &quot;BOSTON1&quot; &quot;AEC&quot;     &quot;edu&quot;</code></pre>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="regresión-lineal-múltiple.html#cb54-1" tabindex="-1"></a>n.model<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span><span class="dv">1</span>,<span class="at">data=</span>dat1)</span>
-<span id="cb54-2"><a href="regresión-lineal-múltiple.html#cb54-2" tabindex="-1"></a>all<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span>.,<span class="at">data=</span>dat1)</span>
-<span id="cb54-3"><a href="regresión-lineal-múltiple.html#cb54-3" tabindex="-1"></a>models<span class="ot">&lt;-</span><span class="fu">step</span>(all, <span class="at">scope =</span><span class="fu">formula</span>(all),<span class="at">direction =</span><span class="st">&quot;backward&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="regresión-lineal-múltiple.html#cb56-1" tabindex="-1"></a>n.model<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span><span class="dv">1</span>,<span class="at">data=</span>dat1)</span>
+<span id="cb56-2"><a href="regresión-lineal-múltiple.html#cb56-2" tabindex="-1"></a>all<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span>.,<span class="at">data=</span>dat1)</span>
+<span id="cb56-3"><a href="regresión-lineal-múltiple.html#cb56-3" tabindex="-1"></a>models<span class="ot">&lt;-</span><span class="fu">step</span>(all, <span class="at">scope =</span><span class="fu">formula</span>(all),<span class="at">direction =</span><span class="st">&quot;backward&quot;</span>)</span></code></pre></div>
 <pre><code>## Start:  AIC=95.04
 ## BOSTON1 ~ edad + AEC + edu
 ## 
@@ -379,7 +379,7 @@ F_{cambio|X_{j}}= \frac{R_{cambio|X_{j}}^{2}(n-p-1)}{1 - R_{12 \ldots p}^{2}} = 
 ## &lt;none&gt;              562.64 93.943
 ## - edu   1     81.11 643.75 95.983
 ## - edad  1    131.75 694.39 98.255</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="regresión-lineal-múltiple.html#cb56-1" tabindex="-1"></a><span class="fu">summary</span>(models)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="regresión-lineal-múltiple.html#cb58-1" tabindex="-1"></a><span class="fu">summary</span>(models)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = BOSTON1 ~ edad + edu, data = dat1)
@@ -400,11 +400,11 @@ F_{cambio|X_{j}}= \frac{R_{cambio|X_{j}}^{2}(n-p-1)}{1 - R_{12 \ldots p}^{2}} = 
 ## Multiple R-squared:  0.306,  Adjusted R-squared:  0.2546 
 ## F-statistic: 5.952 on 2 and 27 DF,  p-value: 0.00722</code></pre>
 <p>El método de selección por pasos sucesivos es una combinación de ambos y que presenta la diferencia de que en este procedimiento una variable que ha salido en una etapa puede volver a entrar en otra. Lo mismo puede decirse para aquellas variables que han entrado en un momento determinado y que pueden salir en una fase posterior <span class="citation">(<a href="referencias.html#ref-ato">Ato &amp; Vallejo, 2007</a>)</span>. Los resultados aplicados al modelo anterior son idénticos.</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="regresión-lineal-múltiple.html#cb58-1" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
-<span id="cb58-2"><a href="regresión-lineal-múltiple.html#cb58-2" tabindex="-1"></a>dat1<span class="ot">&lt;-</span> dat[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>)]</span>
-<span id="cb58-3"><a href="regresión-lineal-múltiple.html#cb58-3" tabindex="-1"></a>n.model<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span><span class="dv">1</span>,<span class="at">data=</span>dat1)</span>
-<span id="cb58-4"><a href="regresión-lineal-múltiple.html#cb58-4" tabindex="-1"></a>all<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span>.,<span class="at">data=</span>dat1)</span>
-<span id="cb58-5"><a href="regresión-lineal-múltiple.html#cb58-5" tabindex="-1"></a>models<span class="ot">&lt;-</span><span class="fu">step</span>(n.model, <span class="at">scope =</span><span class="fu">formula</span>(all),<span class="at">direction =</span><span class="st">&quot;both&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="regresión-lineal-múltiple.html#cb60-1" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
+<span id="cb60-2"><a href="regresión-lineal-múltiple.html#cb60-2" tabindex="-1"></a>dat1<span class="ot">&lt;-</span> dat[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>)]</span>
+<span id="cb60-3"><a href="regresión-lineal-múltiple.html#cb60-3" tabindex="-1"></a>n.model<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span><span class="dv">1</span>,<span class="at">data=</span>dat1)</span>
+<span id="cb60-4"><a href="regresión-lineal-múltiple.html#cb60-4" tabindex="-1"></a>all<span class="ot">&lt;-</span> <span class="fu">lm</span>(BOSTON1<span class="sc">~</span>.,<span class="at">data=</span>dat1)</span>
+<span id="cb60-5"><a href="regresión-lineal-múltiple.html#cb60-5" tabindex="-1"></a>models<span class="ot">&lt;-</span><span class="fu">step</span>(n.model, <span class="at">scope =</span><span class="fu">formula</span>(all),<span class="at">direction =</span><span class="st">&quot;both&quot;</span>)</span></code></pre></div>
 <pre><code>## Start:  AIC=100.9
 ## BOSTON1 ~ 1
 ## 
@@ -431,7 +431,7 @@ F_{cambio|X_{j}}= \frac{R_{cambio|X_{j}}^{2}(n-p-1)}{1 - R_{12 \ldots p}^{2}} = 
 ## + AEC   1    16.756 545.89 95.036
 ## - edu   1    81.110 643.75 95.983
 ## - edad  1   131.747 694.39 98.255</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="regresión-lineal-múltiple.html#cb60-1" tabindex="-1"></a><span class="fu">summary</span>(models)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="regresión-lineal-múltiple.html#cb62-1" tabindex="-1"></a><span class="fu">summary</span>(models)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = BOSTON1 ~ edad + edu, data = dat1)
