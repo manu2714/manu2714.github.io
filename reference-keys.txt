@@ -130,13 +130,13 @@ fig:unnamed-chunk-164
 fig:unnamed-chunk-165
 fig:unnamed-chunk-166
 tab:unnamed-chunk-167
-fig:fig0
-fig:fig1
+fig:unnamed-chunk-169
+fig:unnamed-chunk-170
 fig:fig3
 fig:fig4
 fig:sup
 fig:gr
-fig:unnamed-chunk-171
+fig:unnamed-chunk-173
 fig:rmd
 fig:rmd3
 fig:rmd2
@@ -147,8 +147,6 @@ fig:jamovi1
 fig:jamovi2
 fig:jamovi3
 fig:jamovi4
-fig:unnamed-chunk-172
-fig:unnamed-chunk-173
 fig:unnamed-chunk-174
 fig:unnamed-chunk-175
 fig:unnamed-chunk-176
@@ -157,6 +155,8 @@ fig:unnamed-chunk-178
 fig:unnamed-chunk-179
 fig:unnamed-chunk-180
 fig:unnamed-chunk-181
+fig:unnamed-chunk-182
+fig:unnamed-chunk-183
 introducción-a-los-procedimientos-de-investigación-en-psicología
 lógica-de-la-investigación-científica
 validez-de-las-investigaciones
