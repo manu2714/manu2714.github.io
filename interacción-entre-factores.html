@@ -352,74 +352,159 @@ Figura 4.4: Datos del ejemplo 4.1
 <div style="page-break-after: always;"></div>
 <p>Analizando estos datos nos encontramos que existe un efecto interactivo entre la variable tipo de dieta y horas de sueño (ver tabla 4.1). Asimismo, podemos comprobar mediante el estadístico de Levene que se cumple el supuesto de homogeneidad (ver tabla 4.2).</p>
 <table>
-<caption><span id="tab:unnamed-chunk-109">Tabla 4.1: </span>Resultados del ejemplo 4.1</caption>
+<caption>
+<span id="tab:unnamed-chunk-109">Tabla 4.1: </span>Resultados del ejemplo 4.1
+</caption>
 <thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Df</th>
-<th align="right">Sum Sq</th>
-<th align="right">Mean Sq</th>
-<th align="right">F value</th>
-<th align="right">Pr(&gt;F)</th>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+Sum Sq
+</th>
+<th style="text-align:right;">
+Mean Sq
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">horas</td>
-<td align="right">2</td>
-<td align="right">37.27</td>
-<td align="right">18.63</td>
-<td align="right">5.11</td>
-<td align="right">0.01</td>
+<tr>
+<td style="text-align:left;">
+horas
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+37.27
+</td>
+<td style="text-align:right;">
+18.63
+</td>
+<td style="text-align:right;">
+5.11
+</td>
+<td style="text-align:right;">
+0.01
+</td>
 </tr>
-<tr class="even">
-<td align="left">Dieta</td>
-<td align="right">1</td>
-<td align="right">12.03</td>
-<td align="right">12.03</td>
-<td align="right">3.30</td>
-<td align="right">0.08</td>
+<tr>
+<td style="text-align:left;">
+Dieta
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+12.03
+</td>
+<td style="text-align:right;">
+12.03
+</td>
+<td style="text-align:right;">
+3.30
+</td>
+<td style="text-align:right;">
+0.08
+</td>
 </tr>
-<tr class="odd">
-<td align="left">horas:Dieta</td>
-<td align="right">2</td>
-<td align="right">28.47</td>
-<td align="right">14.23</td>
-<td align="right">3.90</td>
-<td align="right">0.03</td>
+<tr>
+<td style="text-align:left;">
+horas:Dieta
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+28.47
+</td>
+<td style="text-align:right;">
+14.23
+</td>
+<td style="text-align:right;">
+3.90
+</td>
+<td style="text-align:right;">
+0.03
+</td>
 </tr>
-<tr class="even">
-<td align="left">Residuals</td>
-<td align="right">24</td>
-<td align="right">87.60</td>
-<td align="right">3.65</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
+<tr>
+<td style="text-align:left;">
+Residuals
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+87.60
+</td>
+<td style="text-align:right;">
+3.65
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
 </tr>
 </tbody>
 </table>
 <table>
-<caption><span id="tab:unnamed-chunk-110">Tabla 4.2: </span>Prueba de Levene del ejemplo 4.1</caption>
+<caption>
+<span id="tab:unnamed-chunk-110">Tabla 4.2: </span>Prueba de Levene del ejemplo 4.1
+</caption>
 <thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Df</th>
-<th align="right">F value</th>
-<th align="right">Pr(&gt;F)</th>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">group</td>
-<td align="right">5</td>
-<td align="right">0.14</td>
-<td align="right">0.98</td>
+<tr>
+<td style="text-align:left;">
+group
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+0.98
+</td>
 </tr>
-<tr class="even">
-<td align="left"></td>
-<td align="right">24</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
 </tr>
 </tbody>
 </table>
@@ -433,11 +518,6 @@ Figura 4.5: Representación gráfica del ejemplo 4.1
 <div id="cálculo-de-los-efectos-simples" class="section level4 hasAnchor" number="4.2.1.1">
 <h4><span class="header-section-number">4.2.1.1</span> Cálculo de los efectos simples<a href="interacción-entre-factores.html#cálculo-de-los-efectos-simples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Una vez que se constata la existencia de interacción en el diseño, el paso siguiente consiste en interpretar la interacción mediante la comparación de los efectos simples. Un efecto simple calcula la diferencia de dos valores de la VD en presencia de dos valores distintos de la VI, manteniendo constante el valor de una tercera. Consideremos los valores medios de nuestro ejemplo 1:</p>
-<pre><code>## 
-## Attaching package: &#39;kableExtra&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     group_rows</code></pre>
 <table>
 <caption>
 <span id="tab:tab42">Tabla 4.3: </span>Medias de las condiciones del ejemplo 4.1
