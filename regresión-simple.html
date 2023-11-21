@@ -371,6 +371,24 @@ Figura 6.2: Relación entre las medidas de BOSTON2 y BOSTON1
 <div id="predictores-categóricos" class="section level3 hasAnchor" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> Predictores categóricos<a href="regresión-simple.html#predictores-categóricos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En el modelo de regresión las variables predictoras pueden ser cuantitativas o cualitativas. Un ejemplo de variable cualitativa puede ser el género. Los resultados del modelo de regresión que relaciona el género con la puntuación en el test de Boston aparece en la siguiente tabla:</p>
+<pre><code>## 
+## Call:
+## lm(formula = BOSTON1 ~ sexo, data = dat)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -13.7778  -3.0952  -0.4365   5.1429   8.2222 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   49.095      1.141  43.032   &lt;2e-16 ***
+## sexohombre     2.683      2.083   1.288    0.208    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 5.228 on 28 degrees of freedom
+## Multiple R-squared:  0.05592,    Adjusted R-squared:  0.0222 
+## F-statistic: 1.659 on 1 and 28 DF,  p-value: 0.2083</code></pre>
 <p>Observamos que la recta de regresión obtenida es:</p>
 <p><span class="math display">\[
 Y_{j} = 49,10 + 2,68* sexo \hspace{15mm} para\; hombres \;y
@@ -378,7 +396,7 @@ Y_{j} = 49,10 + 2,68* sexo \hspace{15mm} para\; hombres \;y
 <span class="math display">\[
 Y_{j} = 49,10 \hspace{35mm} para\; mujeres
 \]</span>
-Como la variable sexo se ha categorizado como 0 si la persona es mujer y 1 si es hombre el valor esperado en la prueba de Boston será mayor para los hombres que para las mujeres. O lo que es lo mismo, la “intercept” de la ecuación de regresión se corresponde con el valor medio de las mujeres en el test de Boston. Esta es la codificación recomendable para facilitar la interpretación del modelo. Sin embargo, cualquier otra codificación es posible. No obstante, <span class="citation">Hayes (<a href="referencias.html#ref-hayes">2013</a>)</span> recomienda usar valores cuya diferencia entre los valores sea igual a 1. De este modo, el coeficiente <span class="math inline">\(\beta_{1}\)</span> se podrá interpretar como la diferencia exitente entre las medias de los dos grupos.</p>
+Como la variable sexo se ha categorizado como 0 si la persona es mujer y 1 si es hombre el valor esperado en la prueba de Boston será mayor para los hombres que para las mujeres. O lo que es lo mismo, la “intercept” de la ecuación de regresión se corresponde con el valor medio de las mujeres en el test de Boston. Esta es la codificación recomendable para facilitar la interpretación del modelo. Sin embargo, cualquier otra codificación es posible. No obstante, <span class="citation">Hayes (<a href="referencias.html#ref-hayes">2013</a>)</span> recomienda usar valores cuya diferencia entre los valores sea igual a 1. De este modo, el coeficiente <span class="math inline">\(\beta_{1}\)</span> se podrá interpretar como la diferencia existente entre las medias de los dos grupos.</p>
 </div>
 <div id="realización-de-pronósticos" class="section level3 hasAnchor" number="6.2.2">
 <h3><span class="header-section-number">6.2.2</span> Realización de pronósticos<a href="regresión-simple.html#realización-de-pronósticos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
