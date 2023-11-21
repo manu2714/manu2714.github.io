@@ -23,7 +23,7 @@
 <meta name="author" content="Manuel Morales Ortiz" />
 
 
-<meta name="date" content="2023-11-20" />
+<meta name="date" content="2023-11-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -326,18 +326,6 @@ Figura 6.2: Relación entre las medidas de BOSTON2 y BOSTON1
 </div>
 <p>Podemos observar que entre las dos variables de la figura 1 existe una relación lineal de tipo . Es decir, a medida que aumenta la edad, los sujetos tienden a obtener una menor puntuación en el test de Boston.</p>
 <p>La recta de regresión obtenida para la figura 1 es:</p>
-<pre><code>## \begin{table}[ht]
-## \centering
-## \begin{tabular}{rrrrr}
-##   \hline
-##  &amp; Estimate &amp; Std. Error &amp; t value &amp; Pr($&gt;$$|$t$|$) \\ 
-##   \hline
-## (Intercept) &amp; 71.9060 &amp; 8.2132 &amp; 8.75 &amp; 0.0000 \\ 
-##   edad &amp; -0.3254 &amp; 0.1207 &amp; -2.69 &amp; 0.0118 \\ 
-##    \hline
-## \end{tabular}
-## \caption{Regresión de la medida del BOSTON1 sobre la edad} 
-## \end{table}</code></pre>
 <p>En otras ocasiones nos encontraremos con relaciones directas como en el caso de la figura 2. Se obtiene que a medida que aumenta la puntuación en el primer momento del Boston también aumenta la puntuación obtenida en el Boston en el momento 2. La recta de regresión obtenida para la figura 2 es:</p>
 <p>Call:
 lm(formula = BOSTON2 ~ BOSTON1, data = dat)</p>
